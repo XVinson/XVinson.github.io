@@ -3,11 +3,11 @@
   <title>Vinson&#39;s Blog</title>
   
   <subtitle>记录生活中的点点滴滴</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://vinsonx.net/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://vinsonx.net/"/>
   <updated>2022-03-04T05:29:38.576Z</updated>
-  <id>http://example.com/</id>
+  <id>http://vinsonx.net/</id>
   
   <author>
     <name>Vinson</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/03/04/hello-world/"/>
-    <id>http://example.com/2022/03/04/hello-world/</id>
+    <link href="http://vinsonx.net/2022/03/04/hello-world/"/>
+    <id>http://vinsonx.net/2022/03/04/hello-world/</id>
     <published>2022-03-04T05:29:38.576Z</published>
     <updated>2022-03-04T05:29:38.576Z</updated>
     

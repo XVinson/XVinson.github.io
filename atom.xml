@@ -6,7 +6,7 @@
   <link href="http://vinsonx.net/atom.xml" rel="self"/>
   
   <link href="http://vinsonx.net/"/>
-  <updated>2022-03-21T06:49:36.818Z</updated>
+  <updated>2022-03-25T05:09:24.974Z</updated>
   <id>http://vinsonx.net/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022/3随笔</title>
+    <link href="http://vinsonx.net/2022/03/25/2022-3%E9%9A%8F%E7%AC%94/"/>
+    <id>http://vinsonx.net/2022/03/25/2022-3%E9%9A%8F%E7%AC%94/</id>
+    <published>2022-03-25T05:03:53.000Z</published>
+    <updated>2022-03-25T05:09:24.974Z</updated>
+    
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again," data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="b063654aee044451bc1791f80ea3650e70dc0e97d8fc98023edcbc33b8189de7">139e56bf91994d96ef2de71c348af7f2b60dc2e969d22afbe7f3552fc78e4adb</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <summary type="html">have been good lately ？</summary>
+    
+    
+    
+    <category term="随笔" scheme="http://vinsonx.net/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>2019信息安全管理与评估</title>

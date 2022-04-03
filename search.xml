@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2022/3随笔</title>
-    <url>/2022/03/25/2022-3%E9%9A%8F%E7%AC%94/</url>
-    <content><![CDATA[<h2 id="have-been-good-lately-？"><a href="#have-been-good-lately-？" class="headerlink" title="have been good lately ？"></a>have been good lately ？<span id="more"></span></h2><h4 id="单纯来分享近来的事情"><a href="#单纯来分享近来的事情" class="headerlink" title="单纯来分享近来的事情"></a>单纯来分享近来的事情</h4><p style="text-indent:2em">时间过的很快，现在已经大二下学期了。感觉到了大学才慢慢的明白了许多事情…………今天冥想的时候突然想到要好好的给自己总结一下，这不我就来了！</p>
-<p style="text-indent:2em">最近很多事情围绕着我，感觉自己的时间真的不是很够用！！！每天都在想为什么一天不是48小时72小时。开学的时候，收到了毕老师的消息问我设备命令学的怎么样了。说实话我已经有段时间没有学过那些东西了,但是我感觉也是一个竞赛的机会，我就冲上去了。加入了这个比赛，我也和他们一样来到了竞赛队机房——研究室。起初还是8点多上班（刚来的时候他们都喊来机房叫上班）9点半下班，由于我最初的目标是要专升本！所以我在机房里还会学习高数和英语，所幸的是他们也有人和我一样有着这个目标，显得我不会很尴尬哈哈哈哈。但慢慢的到后来觉得时间很是不够用，逐渐开始7点起床6点半起床，因为根据前一天的感受，感觉自己在早一点起床也没有关系不会影响第二天的状态，然后就一天比一天早，争取时间嘛，年轻人不得拼一下！！！</p>
-<p style="text-indent:2em">但是在中途我也迷茫过很多次，询问了一些有经验的前辈和朋友们。收获了许多，也让我对一些事情有了归类。我开始每天规划自己的每一天，感觉当前最主要的还是专升本，考一个好的学校能让自己的上限变的更高更好，接触的圈子也会不一样，所以我要努力努力！！！其次就是竞赛，但是我感觉我入门比较晚了，大一的时候没有考虑很多就想着搞学校成绩了，但是不负所望我获得了专业第一名！但是我却忽视了一些专业技能的训练，导致入门晚了许多，但是我相信现在努力也不会晚。最后一项就是实习+亚运会安服志愿者！我觉得实习可以学到比自己自学更多的东西。好在我抓住了这次的机会，现在就差最后的一次面试了！希望可以如愿通过以及亚运会安服志愿者！</p>
-<p style="text-indent:2em">我要好好把握每一天，不可以在浑浑噩噩的摆烂了！</p>
-<p style="text-indent:2em">今天想到觉得自己应该定期的总结一下，日后要做如何改进。</p>
-<p style="text-indent:2em">很久没有写过文章了哈哈哈。日后就每周总结分享一次吧，也会在我的博客中分享我的相关笔记等等。</p>]]></content>
-      <categories>
-        <category>diary</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ACTF2020新生赛Upload</title>
-    <url>/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/</url>
-    <content><![CDATA[<h3 id="发一些入门的CTF题目（Upload）"><a href="#发一些入门的CTF题目（Upload）" class="headerlink" title="发一些入门的CTF题目（Upload）"></a>发一些入门的CTF题目（Upload）<span id="more"></span></h3><p><strong>打开题目靶场发现是一个上传文件</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E9%A2%98%E7%9B%AE.png" alt="题目"><br><strong>尝试上传一句话木马</strong></p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[cmd]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>提示报错</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E6%8F%90%E7%A4%BA.png" alt="提示"><br><strong>我们利用bp抓包，更改后缀名为phtml</strong><br>上传绕过不懂的可以看这个链接<br>转载<a href="https://blog.csdn.net/qq_38680693/article/details/81700378">https://blog.csdn.net/qq_38680693/article/details/81700378</a><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/bp.png" alt="bp"><br><strong>访问网址利用hackbar工具查看flag</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/flag.png" alt="flag"></p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-  </entry>
-  <entry>
     <title>2019信息安全管理与评估</title>
     <url>/2022/03/09/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0%E8%B5%9B%E5%8D%B7/</url>
     <content><![CDATA[<p>2019年国赛题目笔记（三层命令配置） <span id="more"></span><br><strong>网络拓扑图</strong><br><img src="/2022/03/09/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0%E8%B5%9B%E5%8D%B7/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0%E6%8B%93%E6%89%91%E5%9B%BE.PNG" alt="2019信息安全管理与评估拓扑图"><br><strong>IP地址规则表</strong><br><img src="/2022/03/09/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0%E8%B5%9B%E5%8D%B7/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0IP%E5%9C%B0%E5%9D%80%E8%A7%84%E5%88%99%E8%A1%A81.png" alt="2019信息安全管理与评估IP地址规则表"><br>由于第一阶段我负责三层方面的命令 笔记中只有三层命令<br><strong>基础划分vlan和ip配置就不写上去了</strong></p>
@@ -49,6 +25,30 @@
       </categories>
   </entry>
   <entry>
+    <title>2022/3随笔</title>
+    <url>/2022/03/25/2022-3%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<h2 id="have-been-good-lately-？"><a href="#have-been-good-lately-？" class="headerlink" title="have been good lately ？"></a>have been good lately ？<span id="more"></span></h2><h4 id="单纯来分享近来的事情"><a href="#单纯来分享近来的事情" class="headerlink" title="单纯来分享近来的事情"></a>单纯来分享近来的事情</h4><p style="text-indent:2em">时间过的很快，现在已经大二下学期了。感觉到了大学才慢慢的明白了许多事情…………今天冥想的时候突然想到要好好的给自己总结一下，这不我就来了！</p>
+<p style="text-indent:2em">最近很多事情围绕着我，感觉自己的时间真的不是很够用！！！每天都在想为什么一天不是48小时72小时。开学的时候，收到了毕老师的消息问我设备命令学的怎么样了。说实话我已经有段时间没有学过那些东西了,但是我感觉也是一个竞赛的机会，我就冲上去了。加入了这个比赛，我也和他们一样来到了竞赛队机房——研究室。起初还是8点多上班（刚来的时候他们都喊来机房叫上班）9点半下班，由于我最初的目标是要专升本！所以我在机房里还会学习高数和英语，所幸的是他们也有人和我一样有着这个目标，显得我不会很尴尬哈哈哈哈。但慢慢的到后来觉得时间很是不够用，逐渐开始7点起床6点半起床，因为根据前一天的感受，感觉自己在早一点起床也没有关系不会影响第二天的状态，然后就一天比一天早，争取时间嘛，年轻人不得拼一下！！！</p>
+<p style="text-indent:2em">但是在中途我也迷茫过很多次，询问了一些有经验的前辈和朋友们。收获了许多，也让我对一些事情有了归类。我开始每天规划自己的每一天，感觉当前最主要的还是专升本，考一个好的学校能让自己的上限变的更高更好，接触的圈子也会不一样，所以我要努力努力！！！其次就是竞赛，但是我感觉我入门比较晚了，大一的时候没有考虑很多就想着搞学校成绩了，但是不负所望我获得了专业第一名！但是我却忽视了一些专业技能的训练，导致入门晚了许多，但是我相信现在努力也不会晚。最后一项就是实习+亚运会安服志愿者！我觉得实习可以学到比自己自学更多的东西。好在我抓住了这次的机会，现在就差最后的一次面试了！希望可以如愿通过以及亚运会安服志愿者！</p>
+<p style="text-indent:2em">我要好好把握每一天，不可以在浑浑噩噩的摆烂了！</p>
+<p style="text-indent:2em">今天想到觉得自己应该定期的总结一下，日后要做如何改进。</p>
+<p style="text-indent:2em">很久没有写过文章了哈哈哈。日后就每周总结分享一次吧，也会在我的博客中分享我的相关笔记等等。</p>]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ACTF2020新生赛Upload</title>
+    <url>/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/</url>
+    <content><![CDATA[<h3 id="发一些入门的CTF题目（Upload）"><a href="#发一些入门的CTF题目（Upload）" class="headerlink" title="发一些入门的CTF题目（Upload）"></a>发一些入门的CTF题目（Upload）<span id="more"></span></h3><p><strong>打开题目靶场发现是一个上传文件</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E9%A2%98%E7%9B%AE.png" alt="题目"><br><strong>尝试上传一句话木马</strong></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[cmd]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>提示报错</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E6%8F%90%E7%A4%BA.png" alt="提示"><br><strong>我们利用bp抓包，更改后缀名为phtml</strong><br>上传绕过不懂的可以看这个链接<br>转载<a href="https://blog.csdn.net/qq_38680693/article/details/81700378">https://blog.csdn.net/qq_38680693/article/details/81700378</a><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/bp.png" alt="bp"><br><strong>访问网址利用hackbar工具查看flag</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/flag.png" alt="flag"></p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+  </entry>
+  <entry>
     <title>GXYCTF2019Ping Ping Ping</title>
     <url>/2022/04/03/GXYCTF2019Ping-Ping-Ping/</url>
     <content><![CDATA[<h3 id="Ping-Ping-Ping"><a href="#Ping-Ping-Ping" class="headerlink" title="Ping Ping Ping "></a>Ping Ping Ping <span id="more"></span></h3><p><strong>打开题目发现只有简单的&#x2F;?ip</strong><br><img src="/2022/04/03/GXYCTF2019Ping-Ping-Ping/timu.png" alt="题目"><br><strong>根据题目ping ping ping 猜测要ping ip 然后在url里尝试构造payload</strong></p>
@@ -69,6 +69,35 @@
 ]]></content>
       <categories>
         <category>CTF</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>tools</title>
+    <url>/2022/03/31/tools/</url>
+    <content><![CDATA[<h3 id="分享一些自己在用的工具"><a href="#分享一些自己在用的工具" class="headerlink" title="分享一些自己在用的工具"></a>分享一些自己在用的工具</h3><p><strong>自行提取不断更新</strong><span id="more"></span></p>
+<h4 id="1-antSword中国蚁剑"><a href="#1-antSword中国蚁剑" class="headerlink" title="1.antSword中国蚁剑"></a>1.antSword中国蚁剑</h4><p>链接：<a href="https://pan.baidu.com/s/1-Mh_PkASoi6GTNLMBed5QQ">https://pan.baidu.com/s/1-Mh_PkASoi6GTNLMBed5QQ</a><br>提取码：6666 </p>
+<h4 id="2-御剑"><a href="#2-御剑" class="headerlink" title="2.御剑"></a>2.御剑</h4><p>链接：<a href="https://pan.baidu.com/s/1B-DLMg6MCRti8WIMfJtocA">https://pan.baidu.com/s/1B-DLMg6MCRti8WIMfJtocA</a><br>提取码：6666 </p>
+<h4 id="3-超级加解密转换工具"><a href="#3-超级加解密转换工具" class="headerlink" title="3.超级加解密转换工具"></a>3.超级加解密转换工具</h4><p>链接：<a href="https://pan.baidu.com/s/1Krqul01gZ6bTdQNCSFnoPQ">https://pan.baidu.com/s/1Krqul01gZ6bTdQNCSFnoPQ</a><br>提取码：6666 </p>
+<h4 id="4-BurpSuit"><a href="#4-BurpSuit" class="headerlink" title="4.BurpSuit"></a>4.BurpSuit</h4><p>链接：<a href="https://pan.baidu.com/s/10mteY9e8wJgbbouFhdb5pA">https://pan.baidu.com/s/10mteY9e8wJgbbouFhdb5pA</a><br>提取码：6666 </p>
+<h4 id="5-Wireshark"><a href="#5-Wireshark" class="headerlink" title="5.Wireshark"></a>5.Wireshark</h4><p>链接：<a href="https://pan.baidu.com/s/102oRbMWZZ2My9nYzQJZuqA">https://pan.baidu.com/s/102oRbMWZZ2My9nYzQJZuqA</a><br>提取码：6666 </p>
+<h4 id="6-Xshell6"><a href="#6-Xshell6" class="headerlink" title="6.Xshell6"></a>6.Xshell6</h4><p>链接：<a href="https://pan.baidu.com/s/1jOTEbfKaXJ3y7Vzj_dqukw">https://pan.baidu.com/s/1jOTEbfKaXJ3y7Vzj_dqukw</a><br>提取码：6666 </p>
+<h4 id="7-Layer挖掘机5-0"><a href="#7-Layer挖掘机5-0" class="headerlink" title="7.Layer挖掘机5.0"></a>7.Layer挖掘机5.0</h4><p>链接：<a href="https://pan.baidu.com/s/1H8hBPBEvFK0aGvsgb5RPJw">https://pan.baidu.com/s/1H8hBPBEvFK0aGvsgb5RPJw</a><br>提取码：6666 </p>
+<h4 id="8-phpStudy-64"><a href="#8-phpStudy-64" class="headerlink" title="8.phpStudy_64"></a>8.phpStudy_64</h4><p>链接：<a href="https://pan.baidu.com/s/1kuDLHmPPNt4YG3dCj1tosA">https://pan.baidu.com/s/1kuDLHmPPNt4YG3dCj1tosA</a><br>提取码：6666 </p>
+<h4 id="9-php-8-1-3-src"><a href="#9-php-8-1-3-src" class="headerlink" title="9.php-8.1.3-src"></a>9.php-8.1.3-src</h4><p>链接：<a href="https://pan.baidu.com/s/1chKGrPBrPn6JwtGelDsm6A">https://pan.baidu.com/s/1chKGrPBrPn6JwtGelDsm6A</a><br>提取码：6666 </p>
+<h4 id="10-npp-8-1-9"><a href="#10-npp-8-1-9" class="headerlink" title="10.npp.8.1.9"></a>10.npp.8.1.9</h4><p>链接：<a href="https://pan.baidu.com/s/1VQ0RK9zRijBapM_K9KCMSg">https://pan.baidu.com/s/1VQ0RK9zRijBapM_K9KCMSg</a><br>提取码：6666 </p>
+<h4 id="11-node-v16-14-0-x64"><a href="#11-node-v16-14-0-x64" class="headerlink" title="11.node-v16.14.0-x64"></a>11.node-v16.14.0-x64</h4><p>链接：<a href="https://pan.baidu.com/s/13BpOQ868AbmmQrx8ChFP8w">https://pan.baidu.com/s/13BpOQ868AbmmQrx8ChFP8w</a><br>提取码：6666 </p>
+<h4 id="12-kali-linux-2019-2-amd64"><a href="#12-kali-linux-2019-2-amd64" class="headerlink" title="12.kali-linux-2019.2-amd64"></a>12.kali-linux-2019.2-amd64</h4><p>链接：<a href="https://pan.baidu.com/s/17cVd-5Mj-2-wzufrDg8Ymw">https://pan.baidu.com/s/17cVd-5Mj-2-wzufrDg8Ymw</a><br>提取码：6666 </p>
+<h4 id="13-rhel-8-0-x86-64-dvd"><a href="#13-rhel-8-0-x86-64-dvd" class="headerlink" title="13.rhel-8.0-x86_64-dvd"></a>13.rhel-8.0-x86_64-dvd</h4><p>链接：<a href="https://pan.baidu.com/s/100INFmo6gGJg9HefRYtK9Q">https://pan.baidu.com/s/100INFmo6gGJg9HefRYtK9Q</a><br>提取码：6666 </p>
+<h4 id="14-CentOS-7-x86-64"><a href="#14-CentOS-7-x86-64" class="headerlink" title="14.CentOS-7-x86_64"></a>14.CentOS-7-x86_64</h4><p>链接：<a href="https://pan.baidu.com/s/1rczk_HK53DIVevjrttY4hA">https://pan.baidu.com/s/1rczk_HK53DIVevjrttY4hA</a><br>提取码：6666 </p>
+<h4 id="15-windows-2008-r2-64"><a href="#15-windows-2008-r2-64" class="headerlink" title="15.windows_2008_r2_64"></a>15.windows_2008_r2_64</h4><p>链接：<a href="https://pan.baidu.com/s/1WElNV0TFmWEupAIGSmq_lA">https://pan.baidu.com/s/1WElNV0TFmWEupAIGSmq_lA</a><br>提取码：6666 </p>
+<h4 id="16-jdk-18-windows-x64-bin"><a href="#16-jdk-18-windows-x64-bin" class="headerlink" title="16.jdk-18_windows-x64_bin"></a>16.jdk-18_windows-x64_bin</h4><p>链接：<a href="https://pan.baidu.com/s/1oPcUetblx2k1fqhh6SOjxQ">https://pan.baidu.com/s/1oPcUetblx2k1fqhh6SOjxQ</a><br>提取码：6666 </p>
+<h4 id="17-python-3-10-4-amd64"><a href="#17-python-3-10-4-amd64" class="headerlink" title="17.python-3.10.4-amd64"></a>17.python-3.10.4-amd64</h4><p>链接：<a href="https://pan.baidu.com/s/1sbsO6aNklMw3_vRT6KP4mg">https://pan.baidu.com/s/1sbsO6aNklMw3_vRT6KP4mg</a><br>提取码：6666 </p>
+<h4 id="18-python-2-7-18-amd64"><a href="#18-python-2-7-18-amd64" class="headerlink" title="18.python-2.7.18.amd64"></a>18.python-2.7.18.amd64</h4><p>链接：<a href="https://pan.baidu.com/s/10BZYu9ADbAZjmIKvhD5yIg">https://pan.baidu.com/s/10BZYu9ADbAZjmIKvhD5yIg</a><br>提取码：6666 </p>
+<h4 id="19-mysql-installer-community-8-0-27-1"><a href="#19-mysql-installer-community-8-0-27-1" class="headerlink" title="19.mysql-installer-community-8.0.27.1"></a>19.mysql-installer-community-8.0.27.1</h4><p>链接：<a href="https://pan.baidu.com/s/1L4jQCCHldu1IpLVACh4WdA">https://pan.baidu.com/s/1L4jQCCHldu1IpLVACh4WdA</a><br>提取码：6666 </p>
+<h4 id="20-VSCodeUserSetup-x64-1-64-2"><a href="#20-VSCodeUserSetup-x64-1-64-2" class="headerlink" title="20.VSCodeUserSetup-x64-1.64.2"></a>20.VSCodeUserSetup-x64-1.64.2</h4><p>链接：<a href="https://pan.baidu.com/s/1baJUyqA0GEpbtCqaA9oQng">https://pan.baidu.com/s/1baJUyqA0GEpbtCqaA9oQng</a><br>提取码：6666 </p>
+]]></content>
+      <categories>
+        <category>tools</category>
       </categories>
   </entry>
   <entry>
@@ -107,34 +136,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>tools</title>
-    <url>/2022/03/31/tools/</url>
-    <content><![CDATA[<h3 id="分享一些自己在用的工具"><a href="#分享一些自己在用的工具" class="headerlink" title="分享一些自己在用的工具"></a>分享一些自己在用的工具</h3><p><strong>自行提取不断更新</strong><span id="more"></span></p>
-<h4 id="1-antSword中国蚁剑"><a href="#1-antSword中国蚁剑" class="headerlink" title="1.antSword中国蚁剑"></a>1.antSword中国蚁剑</h4><p>链接：<a href="https://pan.baidu.com/s/1-Mh_PkASoi6GTNLMBed5QQ">https://pan.baidu.com/s/1-Mh_PkASoi6GTNLMBed5QQ</a><br>提取码：6666 </p>
-<h4 id="2-御剑"><a href="#2-御剑" class="headerlink" title="2.御剑"></a>2.御剑</h4><p>链接：<a href="https://pan.baidu.com/s/1B-DLMg6MCRti8WIMfJtocA">https://pan.baidu.com/s/1B-DLMg6MCRti8WIMfJtocA</a><br>提取码：6666 </p>
-<h4 id="3-超级加解密转换工具"><a href="#3-超级加解密转换工具" class="headerlink" title="3.超级加解密转换工具"></a>3.超级加解密转换工具</h4><p>链接：<a href="https://pan.baidu.com/s/1Krqul01gZ6bTdQNCSFnoPQ">https://pan.baidu.com/s/1Krqul01gZ6bTdQNCSFnoPQ</a><br>提取码：6666 </p>
-<h4 id="4-BurpSuit"><a href="#4-BurpSuit" class="headerlink" title="4.BurpSuit"></a>4.BurpSuit</h4><p>链接：<a href="https://pan.baidu.com/s/10mteY9e8wJgbbouFhdb5pA">https://pan.baidu.com/s/10mteY9e8wJgbbouFhdb5pA</a><br>提取码：6666 </p>
-<h4 id="5-Wireshark"><a href="#5-Wireshark" class="headerlink" title="5.Wireshark"></a>5.Wireshark</h4><p>链接：<a href="https://pan.baidu.com/s/102oRbMWZZ2My9nYzQJZuqA">https://pan.baidu.com/s/102oRbMWZZ2My9nYzQJZuqA</a><br>提取码：6666 </p>
-<h4 id="6-Xshell6"><a href="#6-Xshell6" class="headerlink" title="6.Xshell6"></a>6.Xshell6</h4><p>链接：<a href="https://pan.baidu.com/s/1jOTEbfKaXJ3y7Vzj_dqukw">https://pan.baidu.com/s/1jOTEbfKaXJ3y7Vzj_dqukw</a><br>提取码：6666 </p>
-<h4 id="7-Layer挖掘机5-0"><a href="#7-Layer挖掘机5-0" class="headerlink" title="7.Layer挖掘机5.0"></a>7.Layer挖掘机5.0</h4><p>链接：<a href="https://pan.baidu.com/s/1H8hBPBEvFK0aGvsgb5RPJw">https://pan.baidu.com/s/1H8hBPBEvFK0aGvsgb5RPJw</a><br>提取码：6666 </p>
-<h4 id="8-phpStudy-64"><a href="#8-phpStudy-64" class="headerlink" title="8.phpStudy_64"></a>8.phpStudy_64</h4><p>链接：<a href="https://pan.baidu.com/s/1kuDLHmPPNt4YG3dCj1tosA">https://pan.baidu.com/s/1kuDLHmPPNt4YG3dCj1tosA</a><br>提取码：6666 </p>
-<h4 id="9-php-8-1-3-src"><a href="#9-php-8-1-3-src" class="headerlink" title="9.php-8.1.3-src"></a>9.php-8.1.3-src</h4><p>链接：<a href="https://pan.baidu.com/s/1chKGrPBrPn6JwtGelDsm6A">https://pan.baidu.com/s/1chKGrPBrPn6JwtGelDsm6A</a><br>提取码：6666 </p>
-<h4 id="10-npp-8-1-9"><a href="#10-npp-8-1-9" class="headerlink" title="10.npp.8.1.9"></a>10.npp.8.1.9</h4><p>链接：<a href="https://pan.baidu.com/s/1VQ0RK9zRijBapM_K9KCMSg">https://pan.baidu.com/s/1VQ0RK9zRijBapM_K9KCMSg</a><br>提取码：6666 </p>
-<h4 id="11-node-v16-14-0-x64"><a href="#11-node-v16-14-0-x64" class="headerlink" title="11.node-v16.14.0-x64"></a>11.node-v16.14.0-x64</h4><p>链接：<a href="https://pan.baidu.com/s/13BpOQ868AbmmQrx8ChFP8w">https://pan.baidu.com/s/13BpOQ868AbmmQrx8ChFP8w</a><br>提取码：6666 </p>
-<h4 id="12-kali-linux-2019-2-amd64"><a href="#12-kali-linux-2019-2-amd64" class="headerlink" title="12.kali-linux-2019.2-amd64"></a>12.kali-linux-2019.2-amd64</h4><p>链接：<a href="https://pan.baidu.com/s/17cVd-5Mj-2-wzufrDg8Ymw">https://pan.baidu.com/s/17cVd-5Mj-2-wzufrDg8Ymw</a><br>提取码：6666 </p>
-<h4 id="13-rhel-8-0-x86-64-dvd"><a href="#13-rhel-8-0-x86-64-dvd" class="headerlink" title="13.rhel-8.0-x86_64-dvd"></a>13.rhel-8.0-x86_64-dvd</h4><p>链接：<a href="https://pan.baidu.com/s/100INFmo6gGJg9HefRYtK9Q">https://pan.baidu.com/s/100INFmo6gGJg9HefRYtK9Q</a><br>提取码：6666 </p>
-<h4 id="14-CentOS-7-x86-64"><a href="#14-CentOS-7-x86-64" class="headerlink" title="14.CentOS-7-x86_64"></a>14.CentOS-7-x86_64</h4><p>链接：<a href="https://pan.baidu.com/s/1rczk_HK53DIVevjrttY4hA">https://pan.baidu.com/s/1rczk_HK53DIVevjrttY4hA</a><br>提取码：6666 </p>
-<h4 id="15-windows-2008-r2-64"><a href="#15-windows-2008-r2-64" class="headerlink" title="15.windows_2008_r2_64"></a>15.windows_2008_r2_64</h4><p>链接：<a href="https://pan.baidu.com/s/1WElNV0TFmWEupAIGSmq_lA">https://pan.baidu.com/s/1WElNV0TFmWEupAIGSmq_lA</a><br>提取码：6666 </p>
-<h4 id="16-jdk-18-windows-x64-bin"><a href="#16-jdk-18-windows-x64-bin" class="headerlink" title="16.jdk-18_windows-x64_bin"></a>16.jdk-18_windows-x64_bin</h4><p>链接：<a href="https://pan.baidu.com/s/1oPcUetblx2k1fqhh6SOjxQ">https://pan.baidu.com/s/1oPcUetblx2k1fqhh6SOjxQ</a><br>提取码：6666 </p>
-<h4 id="17-python-3-10-4-amd64"><a href="#17-python-3-10-4-amd64" class="headerlink" title="17.python-3.10.4-amd64"></a>17.python-3.10.4-amd64</h4><p>链接：<a href="https://pan.baidu.com/s/1sbsO6aNklMw3_vRT6KP4mg">https://pan.baidu.com/s/1sbsO6aNklMw3_vRT6KP4mg</a><br>提取码：6666 </p>
-<h4 id="18-python-2-7-18-amd64"><a href="#18-python-2-7-18-amd64" class="headerlink" title="18.python-2.7.18.amd64"></a>18.python-2.7.18.amd64</h4><p>链接：<a href="https://pan.baidu.com/s/10BZYu9ADbAZjmIKvhD5yIg">https://pan.baidu.com/s/10BZYu9ADbAZjmIKvhD5yIg</a><br>提取码：6666 </p>
-<h4 id="19-mysql-installer-community-8-0-27-1"><a href="#19-mysql-installer-community-8-0-27-1" class="headerlink" title="19.mysql-installer-community-8.0.27.1"></a>19.mysql-installer-community-8.0.27.1</h4><p>链接：<a href="https://pan.baidu.com/s/1L4jQCCHldu1IpLVACh4WdA">https://pan.baidu.com/s/1L4jQCCHldu1IpLVACh4WdA</a><br>提取码：6666 </p>
-<h4 id="20-VSCodeUserSetup-x64-1-64-2"><a href="#20-VSCodeUserSetup-x64-1-64-2" class="headerlink" title="20.VSCodeUserSetup-x64-1.64.2"></a>20.VSCodeUserSetup-x64-1.64.2</h4><p>链接：<a href="https://pan.baidu.com/s/1baJUyqA0GEpbtCqaA9oQng">https://pan.baidu.com/s/1baJUyqA0GEpbtCqaA9oQng</a><br>提取码：6666 </p>
-]]></content>
-      <categories>
-        <category>tools</category>
-      </categories>
   </entry>
 </search>

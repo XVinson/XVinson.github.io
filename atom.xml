@@ -6,7 +6,7 @@
   <link href="http://vinsonx.net/atom.xml" rel="self"/>
   
   <link href="http://vinsonx.net/"/>
-  <updated>2022-04-11T06:54:23.241Z</updated>
+  <updated>2022-04-11T09:20:51.049Z</updated>
   <id>http://vinsonx.net/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>week of 4.4</title>
     <link href="http://vinsonx.net/2022/04/11/week-of-4-4/"/>
     <id>http://vinsonx.net/2022/04/11/week-of-4-4/</id>
-    <published>2022-04-11T06:16:54.000Z</published>
-    <updated>2022-04-11T06:54:23.241Z</updated>
+    <published>2022-04-11T09:18:56.000Z</published>
+    <updated>2022-04-11T09:20:51.049Z</updated>
     
     <content type="html"><![CDATA[<h2 id="try-to-be-better！！！"><a href="#try-to-be-better！！！" class="headerlink" title="try to be better！！！"></a>try to be better！！！<span id="more"></span></h2><h4 id="上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途"><a href="#上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途" class="headerlink" title="上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途"></a>上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途</h4><p><strong>1.高数</strong><br>高数还是在系统的学习，上网课刷题。这两周的时间把高数第一章函数与极限给过了一遍加上配套的习题学的非常的充实。但是中间做有些题目是比较困难的，可能是因为第一次做的原因很多知识点没有想到，还是缺少刷题了，还要多刷题多整理题目。<br><strong>2.英语</strong><br>英语看过我周计划的人应该都知道我是分模块练习的，起初是按照周计划上来的题目数量，后来我感觉这样写题目写的有点少哈哈哈，然后我就开始准备两三天完成这些任务，当时高数也想提速的发现高数和英语真的不一样，高数题目做的不是很熟练所以写的会比较慢。<br>英语四级考试还有61天，我也要开始准备起来了！上次就差了一点点，这次我一定过！！！<br><strong>3.竞赛</strong><br>竞赛的事情因为疫情时间一直还没确定，平时看的也比较少。<br><strong>4.hacker！！！</strong><br>CTF的题目还没做明白，开始去寻找漏洞了，但是也小有所成，在edu src上寻找了一些中危和低危漏洞，很感谢huazhao分享了一个edu系统通杀！<br><img src="/2022/04/11/week-of-4-4/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5.png" alt="漏洞"><br>之后也会分享一些我的漏洞报告以及笔记分享，会单独放在一个分类里的。<br>还要继续努力，把以前浪费的时间补回来，卷起来！！！<br>逛b站看到一些感触很深的话<br><img src="/2022/04/11/week-of-4-4/%E5%88%86%E4%BA%AB.png" alt="分享"><br><strong>人为了自己而活，日后还有无限可能！！！</strong></p>]]></content>
     
@@ -59,7 +59,7 @@
     <link href="http://vinsonx.net/2022/04/04/week-of-3.28/"/>
     <id>http://vinsonx.net/2022/04/04/week-of-3.28/</id>
     <published>2022-04-04T08:14:44.000Z</published>
-    <updated>2022-04-11T06:21:53.990Z</updated>
+    <updated>2022-04-11T09:20:52.494Z</updated>
     
     <content type="html"><![CDATA[<h2 id="become-who-you-want-to-be！"><a href="#become-who-you-want-to-be！" class="headerlink" title="become who you want to be！"></a>become who you want to be！<span id="more"></span></h2><h4 id="上周给自己制定了一个周计划-给自己制订一些目标！小小分享一下"><a href="#上周给自己制定了一个周计划-给自己制订一些目标！小小分享一下" class="headerlink" title="上周给自己制定了一个周计划 给自己制订一些目标！小小分享一下"></a>上周给自己制定了一个周计划 给自己制订一些目标！小小分享一下</h4><p>一.日常<br>(1).每日一篇NCE3<br>(2).坚持背单词<br>二.西培千题斩<br>英语（时间足够可以多写）：<br>(1).4选1 六篇       （总共70）<br>(2).7选5 二篇       （总共20）<br>(3).15选10 二篇   （总共30）<br>(4).完形填空 二篇 （总共25）<br>(5).篇章问答 二篇 （总共27）<br>(6).汉译英 二篇    （总共30）<br>(7).英译汉 二篇    （总共30）<br>(8).写作 二篇       （总共20）<br>高数（时间足够可以多写）：<br>(1).文亮网课+西培千题斩（二周一个章节(题目除去通关篇)）<br>三.WEB+竞赛<br>(1).day day up!总结到周随笔中<br>四.blog<br>(1).一篇周随笔<br>(2).1-2篇CTF(WEB)<br>这些就是我的每日周计划 但是应该会在2个月左右更新这个周计划的。<br><strong>share</strong><br>在web方面我在Linux基础命令上又去巩固了一遍，小迪安全也没有落下！<br>也开始尝试一些信息收集、漏洞等操作（但是自己入门真的好晚，需要学习的东西还有很多还要更加勤奋！时间很宝贵）<br>自己的时间不是很多，为了少走一些弯路实训室里的师傅们也都很愿意教我，很感动，也通过一位re师傅推荐的web师傅那里报了一个小课哈哈哈，主要有人指导和自己摸索真的不一样！但是还是得看自己学，自己也要努力！！！<br>专升本也要继续加油努力刷题！！去到自己想去的学校！<br><strong>这周我看到一句我很喜欢的话：”请在努力下，为了你想见的人，想做的事，想成为的自己“</strong><br><strong>Vinson Frighting！！！</strong></p>]]></content>
     

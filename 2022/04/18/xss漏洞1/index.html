@@ -27,15 +27,15 @@
 <meta property="og:site_name" content="Vinson&#39;s Blog">
 <meta property="og:description" content="成都某厂商存在存储型xss漏洞敏感信息已打码-_-">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://vinsonx.net/blogimages/xss%E6%BC%8F%E6%B4%9E1/%E4%B8%AA%E4%BA%BA.png">
-<meta property="og:image" content="http://vinsonx.net/blogimages/xss%E6%BC%8F%E6%B4%9E1/%E6%B5%8B%E8%AF%95.png">
-<meta property="og:image" content="http://vinsonx.net/blogimages/xss%E6%BC%8F%E6%B4%9E1/xss.png">
-<meta property="og:image" content="http://vinsonx.net/blogimages/xss%E6%BC%8F%E6%B4%9E1/src.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/%E4%B8%AA%E4%BA%BA.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/%E6%B5%8B%E8%AF%95.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/xss.png">
+<meta property="og:image" content="http://vinsonx.net/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/src.png">
 <meta property="article:published_time" content="2022-04-18T12:09:23.000Z">
-<meta property="article:modified_time" content="2022-05-09T13:38:32.465Z">
+<meta property="article:modified_time" content="2022-05-11T00:30:44.716Z">
 <meta property="article:author" content="Vinson">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://vinsonx.net/blogimages/xss%E6%BC%8F%E6%B4%9E1/%E4%B8%AA%E4%BA%BA.png">
+<meta name="twitter:image" content="http://vinsonx.net/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/%E4%B8%AA%E4%BA%BA.png">
 
 <link rel="canonical" href="http://vinsonx.net/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/">
 
@@ -225,7 +225,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-09 21:38:32" itemprop="dateModified" datetime="2022-05-09T21:38:32+08:00">2022-05-09</time>
+                <time title="Modified: 2022-05-11 08:30:44" itemprop="dateModified" datetime="2022-05-11T08:30:44+08:00">2022-05-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -272,7 +272,7 @@
         <h2 id="成都某厂商存在存储型xss漏洞"><a href="#成都某厂商存在存储型xss漏洞" class="headerlink" title="成都某厂商存在存储型xss漏洞"></a>成都某厂商存在存储型xss漏洞</h2><h2 id="敏感信息已打码"><a href="#敏感信息已打码" class="headerlink" title="敏感信息已打码-_- "></a>敏感信息已打码-_- <span id="more"></span></h2><h4 id="简单思路"><a href="#简单思路" class="headerlink" title="简单思路"></a>简单思路</h4><p>页面功能点多点点，看看哪些地方是有注入点的，比如个人信息，扩展信息，评论，上传图片等。一些做过防护的网站会增加一些过滤，就需要大伙去思考过滤了什么，如何去绕过…</p>
 <h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>成都某厂商案例<br>常用的存储型xss语句</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"><span class="title function_">alert</span>(<span class="regexp">/xss/</span>)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>进到这家厂商的一个小资产内，我注册了一个账号进去进行测试。<br>起初我在个人信息界面里到处测试存储型xss发现都直接被解析了，我也不纠结直接换下一个地方。<br><img src="/./blogimages/xss%E6%BC%8F%E6%B4%9E1/%E4%B8%AA%E4%BA%BA.png" alt="个人"><br>翻了一会功能区找到一个文章评论的地方，进行几次测试发现居然可行！！！很是激动，然后让别人打开这个网页看看是否有弹窗。打开后发现没有弹窗，然后又让他随便发一条评论进行测试，发现需要点击发表评论才会触发请求，出现弹窗。<br><img src="/./blogimages/xss%E6%BC%8F%E6%B4%9E1/%E6%B5%8B%E8%AF%95.png" alt="个人"><br><img src="/./blogimages/xss%E6%BC%8F%E6%B4%9E1/xss.png" alt="xss"><br>提交到补天src上获得了三个库布，补天src首个漏洞！！！<br><img src="/./blogimages/xss%E6%BC%8F%E6%B4%9E1/src.png" alt="src"><br><strong>day day up！！！</strong></p>
+<p>进到这家厂商的一个小资产内，我注册了一个账号进去进行测试。<br>起初我在个人信息界面里到处测试存储型xss发现都直接被解析了，我也不纠结直接换下一个地方。<br><img src="/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/%E4%B8%AA%E4%BA%BA.png" alt="个人"><br>翻了一会功能区找到一个文章评论的地方，进行几次测试发现居然可行！！！很是激动，然后让别人打开这个网页看看是否有弹窗。打开后发现没有弹窗，然后又让他随便发一条评论进行测试，发现需要点击发表评论才会触发请求，出现弹窗。<br><img src="/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/%E6%B5%8B%E8%AF%95.png" alt="个人"><br><img src="/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/xss.png" alt="xss"><br>提交到补天src上获得了三个库布，补天src首个漏洞！！！<br><img src="/2022/04/18/xss%E6%BC%8F%E6%B4%9E1/src.png" alt="src"><br><strong>day day up！！！</strong></p>
 
     </div>
 

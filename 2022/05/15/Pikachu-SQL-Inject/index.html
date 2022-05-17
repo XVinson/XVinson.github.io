@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"vinsonx.net","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="SQL-Inject篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pikachu-SQL-Inject">
+<meta property="og:url" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/index.html">
+<meta property="og:site_name" content="Vinson&#39;s Blog">
+<meta property="og:description" content="SQL-Inject篇">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t1%E9%A2%98%E7%9B%AE.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t1burp1.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t1.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t2%E9%A2%98%E7%9B%AE.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t2-2.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t2-3.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t3.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t3-2.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t3-3.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t4.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t4-2.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t5.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t5-2.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t5-3.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t5-4.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t6.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t6-2.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t6-3.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t7.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t7-2.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t7-3.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t7-4.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t7-5.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t8.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t9.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t10.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t10-2.png">
+<meta property="og:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t10-3.png">
+<meta property="article:published_time" content="2022-05-15T00:34:11.000Z">
+<meta property="article:modified_time" content="2022-05-17T05:50:47.036Z">
+<meta property="article:author" content="Vinson">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/t1%E9%A2%98%E7%9B%AE.png">
+
+<link rel="canonical" href="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Pikachu-SQL-Inject | Vinson's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Vinson's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Vinson's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录生活中的点点滴滴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">16</span></a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/links/" rel="section"><i class="fa fa-fw fa-link"></i>links</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Vinson">
+      <meta itemprop="description" content="请你用绝对清醒的理智去压制不该有的情绪.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vinson's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Pikachu-SQL-Inject
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-15 08:34:11" itemprop="dateCreated datePublished" datetime="2022-05-15T08:34:11+08:00">2022-05-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-17 13:50:47" itemprop="dateModified" datetime="2022-05-17T13:50:47+08:00">2022-05-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Pikachu%E9%9D%B6%E5%9C%BA/" itemprop="url" rel="index"><span itemprop="name">Pikachu靶场</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="SQL-Inject篇"><a href="#SQL-Inject篇" class="headerlink" title="SQL-Inject篇"></a>SQL-Inject篇<span id="more"></span></h2><h4 id="1-数字型注入（POST）"><a href="#1-数字型注入（POST）" class="headerlink" title="1.数字型注入（POST）"></a>1.数字型注入（POST）</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t1%E9%A2%98%E7%9B%AE.png" alt="t1题目"><br>根据下拉框先去尝试任意一个数字点击查询，发现url中并没有传参，提交方式为POST。然后我们点击数字1进行抓包测试<br><img src="/2022/05/15/Pikachu-SQL-Inject/t1burp1.png" alt="burp1"><br>发送到Repeater,进行payload</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id=<span class="number">1</span> <span class="keyword">or</span> <span class="number">1</span>=<span class="number">1</span> &amp;submit=<span class="meta">%</span>E<span class="number">6</span><span class="meta">%</span><span class="number">9</span>F<span class="meta">%</span>A<span class="number">5</span><span class="meta">%</span>E<span class="number">8</span><span class="meta">%</span>AF<span class="meta">%</span>A<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>构造完成之后进行发包就可以看到页面将所有的用户和邮箱全部返回到页面上。<br><img src="/2022/05/15/Pikachu-SQL-Inject/t1.png" alt="t1end"></p>
+<h4 id="2-字符型注入（GET）"><a href="#2-字符型注入（GET）" class="headerlink" title="2.字符型注入（GET）"></a>2.字符型注入（GET）</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t2%E9%A2%98%E7%9B%AE.png" alt="t2题目"><br>先随便尝试输入点击提交，页面返回用户名不存在，这时候发现请求在url内<br><img src="/2022/05/15/Pikachu-SQL-Inject/t2-2.png" alt="t2-2"><br>正常返回的话是用户名和邮箱，然后我们就要进行构造payload。字符串需要添加单引号闭合才可以，我们需要把前后两个单引号注释掉。构造payload</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">aaa</span>&#x27; or <span class="number">1</span>=<span class="number">1</span>--+</span><br></pre></td></tr></table></figure>
+<p>第一个单引号会将前面的单引号闭合，后面的–+号会注释掉后面的单引号。我们尝试提交。<br><img src="/2022/05/15/Pikachu-SQL-Inject/t2-3.png" alt="t2-3"><br>结果就会全部显示在页面上</p>
+<h4 id="3-搜索型注入"><a href="#3-搜索型注入" class="headerlink" title="3.搜索型注入"></a>3.搜索型注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t3.png" alt="t3"><br>我们输入k，然后点击搜索发现包含k字符的用户名输出了<br><img src="/2022/05/15/Pikachu-SQL-Inject/t3-2.png" alt="t3-2"><br>发现和请求在url中然后根据上一题，直接构造payload</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">aaa</span>&#x27; or <span class="number">1</span>=<span class="number">1</span>--+</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t3-3.png" alt="t3-3"><br>只要理解了，然后猜测后台如何拼接，设置合法的payload，构造闭合。</p>
+<h4 id="4-xx型注入"><a href="#4-xx型注入" class="headerlink" title="4.xx型注入"></a>4.xx型注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t4.png" alt="t4"><br>进行尝试输入查询发现一直报错，然后构造payload发现是单引号＋括号闭合方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aaa&#x27;) or 1=1--+</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t4-2.png" alt="t4-2"></p>
+<h4 id="5-”Insert-x2F-Update”注入"><a href="#5-”Insert-x2F-Update”注入" class="headerlink" title="5.”Insert&#x2F;Update”注入"></a>5.”Insert&#x2F;Update”注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t5.png" alt="t5"><br>点击注册，进行注册在提交的时候进行抓包<br><img src="/2022/05/15/Pikachu-SQL-Inject/t5-2.png" alt="t5-2"><br><img src="/2022/05/15/Pikachu-SQL-Inject/t5-3.png" alt="t5-3"><br>发现可以进行报错注入，构造payload可以进行爆库、爆表、爆字段、爆内容</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">updatexml</span>(<span class="number">1</span>,concat(<span class="number">0</span>x7e,database(),<span class="number">0</span>x7e),<span class="number">1</span>)and&#x27;&amp;password=aaa&amp;sex=aaa&amp;phonenum=aaa&amp;email=aaa&amp;add=aaa&amp;submit=submit</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t5-4.png" alt="t5-3"><br>Update和Insert注入是一样的。</p>
+<h4 id="6-”Delete”注入"><a href="#6-”Delete”注入" class="headerlink" title="6.”Delete”注入"></a>6.”Delete”注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t6.png" alt="t6"><br>提交一个留言然后点击删除进行抓包<br><img src="/2022/05/15/Pikachu-SQL-Inject/t6-2.png" alt="t6-2"><br>我们可以把id构造闭合</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span><span class="keyword">or</span> updatexml(<span class="number">1</span>,concat(<span class="number">0</span>x7e,database()),<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>选中右键，convert selection，对其进行url编码。<br><img src="/2022/05/15/Pikachu-SQL-Inject/t6-3.png" alt="t6-3"><br>就可以进行爆库、爆表、爆字段、爆内容等流程了。</p>
+<h4 id="7-”http-header”注入"><a href="#7-”http-header”注入" class="headerlink" title="7.”http header”注入"></a>7.”http header”注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t7.png" alt="t7"><br>点击提示获取账号密码然后点击登录进入页面<br><img src="/2022/05/15/Pikachu-SQL-Inject/t7-2.png" alt="t7-2"><br>点击退出进行抓包<br><img src="/2022/05/15/Pikachu-SQL-Inject/t7-3.png" alt="t7-3"><br>修改User-Agent,后面添加单引号’ 查看结果<br><img src="/2022/05/15/Pikachu-SQL-Inject/t7-4.png" alt="t7-4"><br>发现有注入点，然后我们构造payload</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;<span class="built_in"> or </span>updatexml(1,concat(0x7e,database()),0)<span class="built_in"> or </span>&#x27;</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t7-5.png" alt="t7-5"><br>得到数据库名。</p>
+<h4 id="8-盲注（base-on-boolian）"><a href="#8-盲注（base-on-boolian）" class="headerlink" title="8.盲注（base on boolian）"></a>8.盲注（base on boolian）</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t8.png" alt="t8"><br>输入111查找不到，输入kebo是可以的然后构造payload</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kob<span class="string">e&#x27; and 1=1# (返回正确)</span></span><br><span class="line"><span class="string">kobe&#x27;</span> <span class="keyword">and</span> <span class="number">1</span>=<span class="number">2</span># (返回错误)</span><br></pre></td></tr></table></figure>
+<p>由此判断这里存在布尔盲注</p>
+<h4 id="9-盲注（base-on-time）"><a href="#9-盲注（base-on-time）" class="headerlink" title="9.盲注（base on time）"></a>9.盲注（base on time）</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t9.png" alt="t9"><br>构造payload 查看两条语句的区别（sleep里面的参数是睡眠的时间为几秒）</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kobe</span><br><span class="line">kobe&#x27; <span class="keyword">and</span> <span class="built_in">sleep</span>(<span class="number">5</span>)<span class="meta">#</span></span><br></pre></td></tr></table></figure>
+<p>发现第二条语句会多加载5秒由此判断这里还有时间盲注。</p>
+<h4 id="10-宽字节注入"><a href="#10-宽字节注入" class="headerlink" title="10.宽字节注入"></a>10.宽字节注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t10.png" alt="t10"><br>在BIG5和GBK编码中，两个字节代表一个汉字，因此我们可以在%5c也就是&#x2F;前面加上一个额外的编码如%df，来使mysql认为我们输入了%df%5c，从而把%5c吃掉，构造成了一个汉字。<br>所以我们进行抓包<br><img src="/2022/05/15/Pikachu-SQL-Inject/t10-2.png" alt="t10-2"><br>构造payload</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">%<span class="selector-tag">df</span></span>&#x27;or 1=1#</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t10-3.png" alt="t10-3"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/09/week-of-5-2/" rel="prev" title="week of 5.2">
+      <i class="fa fa-chevron-left"></i> week of 5.2
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-Inject%E7%AF%87"><span class="nav-number">1.</span> <span class="nav-text">SQL-Inject篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%95%B0%E5%AD%97%E5%9E%8B%E6%B3%A8%E5%85%A5%EF%BC%88POST%EF%BC%89"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.数字型注入（POST）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%B3%A8%E5%85%A5%EF%BC%88GET%EF%BC%89"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.字符型注入（GET）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%90%9C%E7%B4%A2%E5%9E%8B%E6%B3%A8%E5%85%A5"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.搜索型注入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-xx%E5%9E%8B%E6%B3%A8%E5%85%A5"><span class="nav-number">1.0.4.</span> <span class="nav-text">4.xx型注入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E2%80%9DInsert-x2F-Update%E2%80%9D%E6%B3%A8%E5%85%A5"><span class="nav-number">1.0.5.</span> <span class="nav-text">5.”Insert&#x2F;Update”注入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E2%80%9DDelete%E2%80%9D%E6%B3%A8%E5%85%A5"><span class="nav-number">1.0.6.</span> <span class="nav-text">6.”Delete”注入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E2%80%9Dhttp-header%E2%80%9D%E6%B3%A8%E5%85%A5"><span class="nav-number">1.0.7.</span> <span class="nav-text">7.”http header”注入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-%E7%9B%B2%E6%B3%A8%EF%BC%88base-on-boolian%EF%BC%89"><span class="nav-number">1.0.8.</span> <span class="nav-text">8.盲注（base on boolian）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-%E7%9B%B2%E6%B3%A8%EF%BC%88base-on-time%EF%BC%89"><span class="nav-number">1.0.9.</span> <span class="nav-text">9.盲注（base on time）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5"><span class="nav-number">1.0.10.</span> <span class="nav-text">10.宽字节注入</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Vinson"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Vinson</p>
+  <div class="site-description" itemprop="description">请你用绝对清醒的理智去压制不该有的情绪.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/XVinson" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;XVinson" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/weixin_59930118?type=blog" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_59930118?type&#x3D;blog" rel="noopener" target="_blank"><i class="fa fa-fw fa-crosshairs"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:58056729@qq.com" title="E-Mail → mailto:58056729@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Vinson</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">16k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">15 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

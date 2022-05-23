@@ -6,7 +6,7 @@
   <link href="http://vinsonx.net/atom.xml" rel="self"/>
   
   <link href="http://vinsonx.net/"/>
-  <updated>2022-05-17T08:02:23.314Z</updated>
+  <updated>2022-05-23T12:41:55.534Z</updated>
   <id>http://vinsonx.net/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>week of 5.16</title>
+    <link href="http://vinsonx.net/2022/05/23/week-of-5-16/"/>
+    <id>http://vinsonx.net/2022/05/23/week-of-5-16/</id>
+    <published>2022-05-23T12:20:47.000Z</published>
+    <updated>2022-05-23T12:41:55.534Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="You-are-valuable-and-your-contribution-is-valued！"><a href="#You-are-valuable-and-your-contribution-is-valued！" class="headerlink" title="You are valuable and your contribution is valued！"></a>You are valuable and your contribution is valued！<span id="more"></span></h2><h4 id="你有价值-你的付出才有人重视！"><a href="#你有价值-你的付出才有人重视！" class="headerlink" title="你有价值,你的付出才有人重视！"></a>你有价值,你的付出才有人重视！</h4><p>这周我的计划虽然说没怎么变但是做的题目少了很多。<br><strong>PLAN</strong><br>一.日常<br>(1).坚持背单词<br>(2).刷题，看小迪安全，看群内师傅们的报告分享<br>二.CET4<br>(1).听力反复听<br>(2).题目仔细分析要精做<br>(3).背背作文模板<br>三.西培千题斩<br>高数（这周好像都没怎么写哈哈哈哈）：<br>(1).文亮网课+西培千题斩（题目还没刷完先不开下一章节了）<br>英语<br>(1).做做阅读题、翻译题、作文(做一些和四级相关的题目多加训练)<br>四.blog<br>(1).一篇周随笔<br>(2).CFT或者报告分享1到2篇吧(这周没怎么在搞网安所以没有什么货好难过)<br><strong>SHARE</strong><br>这周经历了人生中第一次面试——HW面试，由于我学的时间其实算起来是真的蛮短的，所以面试那天真的非常慌张，然后我浅浅的录音了一下想着之后有时间复现一下发到blog上然后一直拖到现在还没复现，下周一定要复现了，把不熟悉的知识点好好巩固一下了。但是面试的时候还是有幸运的事情，我前两天刚打完SQL注入的靶场了解了一些SQL注入的知识点，然后这次面试也都有问到虽然说回答的不是很好，但是至少是有话可以讲的哈哈哈哈不至于尬住。SQL注入的靶场我上周也发到我的blog上了<a href="https://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/#more%E6%9C%9F%E5%BE%85%E5%8F%AF%E4%BB%A5%E9%9D%A2%E8%AF%95%E6%88%90%E5%8A%9F%E5%8F%82%E5%8A%A0HW%EF%BC%81%EF%BC%81%EF%BC%81">https://vinsonx.net/2022/05/15/Pikachu-SQL-Inject/#more期待可以面试成功参加HW！！！</a><br>我发现其实我前段时间打的CTF都忘记写WP了，都是关于一些密码学的题目。下次还有做到一定记录下来！！！</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;You-are-valuable-and-your-contribution-is-valued！&quot;&gt;&lt;a href=&quot;#You-are-valuable-and-your-contribution-is-valued！&quot; class=&quot;headerlink&quot; title=&quot;You are valuable and your contribution is valued！&quot;&gt;&lt;/a&gt;You are valuable and your contribution is valued！&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="diary" scheme="http://vinsonx.net/categories/diary/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>week of 5.9</title>
